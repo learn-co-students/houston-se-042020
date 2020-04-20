@@ -1,17 +1,17 @@
 # Hashketball Review
 
 ## LGs:
-- [ ] **Employ test-driven development best practices in their labs**
+- [x] **Employ test-driven development best practices in their labs**
     * rspec --fail-fast handle one error at a time
     * Red, Green, Refactor
     * Make it work (shameless green), make it right, make it fast
-- [ ] **Distinguish between data types in Ruby and Show how to look up documentation for data types in Ruby**
-- [ ] **Demonstrate the use of common Array methods and Differentiate array methods by their respective return values**
+- [x] **Distinguish between data types in Ruby and Show how to look up documentation for data types in Ruby**
+- [x] **Demonstrate the use of common Array methods and Differentiate array methods by their respective return values**
     * #each
     * #map
     * #select
     * #find
-- [ ] **Define the Single Responsibility Principle**
+- [x] **Define the Single Responsibility Principle**
 
 
 ### Employ test-driven development best practices in their labs
@@ -85,8 +85,8 @@ numbers = [1, 4, 5, 7, 8]
 
 | Method | What does it return? | What should the block return? | What does it look like? |
 | ------------- | ------------- | ------------- | ------------- |
-| each  |  |  | |
-| map  |  |  |  |
-| find  |  |  |  |
-| select  | | | |
+| each  | same array | [‘cat’, ‘dog’, ‘pig’] | ```animals.each {|a| puts a}``` |
+| map  | new modified array | ["I am cat", "I am dog", "I am pig"]  | ```animal.map {|a| "I am #{a}"}``` |
+| find  | single element that mets the condition | 4 | ```num.find {|n| n.even? }``` |
+| select  |all elements in an array which mets the condition |  [4, 8] | ```num.select{|n| n.even?}``` |
 
