@@ -1,11 +1,12 @@
 class Dog < Animal
     # attr_reader :name
     # attr_accessor :mood
-    
-    # def initialize(name)
-    #   @name = name
-    #   @mood = 'nervous'
-    # end
+    attr_accessor :breed
+    # Create initialize method in Dog class to have breed attribute
+    def initialize(name, breed)
+        super(name)
+        @breed = breed
+    end
 
     def say_hi
         # super

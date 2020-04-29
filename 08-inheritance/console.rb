@@ -6,7 +6,7 @@ require_relative "dog.rb"
 require_relative "fish.rb" 
 
 
-d1 = Dog.new("richi")
+d1 = Dog.new("richi", "pug")
 
 c1 = Cat.new("Shady", 7)
 
