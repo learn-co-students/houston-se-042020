@@ -77,6 +77,13 @@
 10. Write the SQL to return the name of all of the artists in the 'Pop' Genre
 
 ```sql
-
+    SELECT DISTINCT artists.name FROM artists
+    JOIN albums
+    ON artists.id = albums.artist_id
+    JOIN tracks
+    ON albums.id = tracks.album_id
+    JOIN genres
+    ON tracks.genre_id = genres.id
+    WHERE genres.name = 'Pop';
 ```
 
