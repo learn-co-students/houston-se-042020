@@ -2,7 +2,7 @@
 
 ### LGs:
 - [x] **Implement a class which inherits from anothor**
-- [x] **Use super keyword to extend child class functionality **
+- [x] **Use super keyword to extend child class functionality**
 
 ---
 
