@@ -1,20 +1,21 @@
 # Sinatra and MVC
 
 ### LGs:
-* - [ ] Explain the Model View Controller (MVC) pattern and give an example
-* - [ ] Implement one model that inherit from ActiveRecord
-* - [ ] Implement one controller to route and process requests
-* - [ ] Implement ERB template and get it to render data from controller and model
-* - [ ] Identify the connection between REST and CRUD
+- [x] Explain the Model View Controller (MVC) pattern and give an example
+- [x] Implement one model that inherit from ActiveRecord
+- [x] Implement one controller to route and process requests
+- [x] Implement ERB template and get it to render data from controller and model
+- [x] Identify the connection between REST and CRUD
 
 #### **Explain the Model View Controller (MVC) pattern and give an example**
-* Sinatra from scratch
-* Config.ru
 * How and Why we use the MVC pattern?
+![](https://i.imgur.com/HlICHEU.png)
     * Separation of concerns
     * Model: interacts with our database, how we create instances
     * Controller: go-between
     * View: html that renders a web page
+* Sinatra from scratch
+* config .ru
 
 **TASK:** Take 1 min with you partner and discuss the MVC pattern
     
