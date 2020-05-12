@@ -5,3 +5,9 @@
 
 <label>year:</label>
 <h4><%= @book.year %> </h4>
+
+<form action="/books/<%= @book.id %>" method="post">
+<input type="hidden" name="_method" value="delete" />
+
+<input type="submit" value="Delete book" />
+</form>
