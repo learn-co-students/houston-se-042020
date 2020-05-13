@@ -1,0 +1,21 @@
+<h3> Single Owner's information </h3>
+
+<label>Name:</label>
+<h4> <%= @owner.name %> </h4>
+
+<label>These are my dogs:</label>
+<ul>
+<% @owner.dogs.each do |dog| %>
+    <a href="/dogs/<%=dog.id%>">
+        <li><%= dog.name %></li>
+    </a>
+<% end %>
+</ul>
+
+<a href="/owners/<%= @owner.id %>/edit"> Edit owner </a>
+
+<form action="/owners/<%= @owner.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+
+<input type="submit" value="Delete owner"/>
+</form>

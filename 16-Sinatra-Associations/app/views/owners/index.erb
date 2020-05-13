@@ -1,0 +1,9 @@
+<ul> Owners: 
+<% @owners.each do |owner| %>
+    <a href="/owners/<%= owner.id%>">
+        <li> <%= owner.name %> </li>
+    </a>
+<% end %>
+</ul>
+
+<a href="/owners/new">New owner </a>
