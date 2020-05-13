@@ -1,0 +1,30 @@
+<form action="/dogs/<%= @dog.id %>" method="post">
+<input type="hidden" name="_method" value="patch">
+
+
+<label>Name:</label>
+<input type="text" name="dog[name]" value="<%= @dog.name%>">
+
+<label>Breed:</label>
+<input type="text" name="dog[breed]" value="<%= @dog.breed%>">
+
+<label>Owner:</label>
+<select name="dog[owner_id]">
+    <% @owners.each do |owner| %>
+        <% if owner == @dog.owner %>
+            <option value=<%= owner.id%> selected >
+                <%= owner.name %>
+            </option>
+        <%else%>
+            <option value=<%= owner.id%> >
+                <%= owner.name %>
+            </option>
+        <%end%>
+    <% end %>
+</select>
+
+<label>Create a new owner:</label>
+<input type="text" name="owner[name]" placeholder="Write owner's name if doesn't exsist already">
+
+<input type="submit" />
+</form>

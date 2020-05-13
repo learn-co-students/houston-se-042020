@@ -36,6 +36,29 @@ class DogsController < ApplicationController
         redirect "/dogs/#{dog.id}"
     end
 
+     # update a dog form
+    get '/dogs/:id/edit' do 
+        @dog = Dog.find(params[:id])
+        @owners = Owner.all
+        erb :edit
+    end
+
+    patch '/dogs/:id' do
+
+        # .update = .assign_attributes + .save
+        dog = Dog.find(params[:id])
+        dog.assign_attributes(params[:dog])
+        
+        if !params[:owner][:name].empty?
+            new_owner = Owner.create(params[:owner])
+
+            dog.owner_id = new_owner.id
+        end
+
+        dog.save
+        redirect "/dogs/#{dog.id}"
+    end
+
     delete '/dogs/:id' do
         dog = Dog.find(params[:id])
         dog.destroy
