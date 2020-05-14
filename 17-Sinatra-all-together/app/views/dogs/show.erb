@@ -1,0 +1,22 @@
+<h3> Single Dog's information </h3>
+
+<label>name:</label>
+<h4> <%= @dog.name %> </h4>
+
+<label>breed:</label>
+<h4> <%= @dog.breed %> </h4>
+
+<label>Owner:</label>
+<a href="/owners/<%= @dog.owner.id %>">
+    <h4>
+        <%= @dog.owner.name %>
+    </h4>
+</a>
+
+
+
+<form action="/dogs/<%= @dog.id %>" method="post">
+<input type="hidden" name="_method" value="delete">
+
+<input type="submit" value="Delete Dog :("/>
+</form>

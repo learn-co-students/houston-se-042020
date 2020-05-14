@@ -1,0 +1,8 @@
+<h4>Name: <%=@performer.name%></h4>
+
+<h4>Concerts:<h4>
+<ul>
+<% @performer.concerts.each do |concert| %>
+    <li>Date: <%= concert.date %> | Venue: <%= concert.venue.address %> </li>
+<% end %>
+</ul>
