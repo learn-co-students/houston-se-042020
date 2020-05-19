@@ -1,0 +1,10 @@
+<%= form_with(model: @character) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :movie %>
+<%= f.collection_select(:movie_id, @movies, :id, :title)%>
+<%= f.label :actor %>
+<%= f.collection_select :actor_id, @actors, :id, :name%>
+
+<%= f.submit %>
+<% end %>
