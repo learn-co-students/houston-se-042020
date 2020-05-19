@@ -16,7 +16,21 @@ Rails.application.routes.draw do
 
   delete '/dogs/:id', to: 'dogs#destroy'
 
-
   # resources :dogs, only: [:index, :show, :new, :create, :edit, :update]
+
+  # toys routes
+  # get '/toys', to: 'toys#index'
+
+  # get '/toys/new', to: 'toys#new'
+
+  # get '/toys/:id', to: 'toys#show'
+
+  # post '/toys', to: 'toys#create'
+
+  # get '/toys/:id/edit', to: 'toys#edit', as: "toy"
+
+  # patch '/toys/:id', to: 'toys#update'
+
+  resources :toys, only: [:index, :show, :new, :create, :edit, :update]
 
 end

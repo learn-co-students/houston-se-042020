@@ -8,9 +8,15 @@
 
 
 Dog.destroy_all
+Toy.destroy_all
 
 Dog.create(name: "richi", breed: "pug", age: 9)
 Dog.create(name: "Roxy", breed: "chihuahua", age: 8)
 Dog.create(name: "Charlie", breed: "Terrier", age: 7)
 Dog.create(name: "Gabe", breed: "Pomareien", age: 4)
 Dog.create(name: "Dogger", breed: "Corgi", age: 8)
+
+Toy.create(name: "Nemo", dog_id: Dog.all.sample.id)
+Toy.create(name: "Teddy", dog_id: Dog.all.sample.id)
+Toy.create(name: "Pooh", dog_id: Dog.all.sample.id)
+

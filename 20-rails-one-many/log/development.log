@@ -919,3 +919,739 @@ Processing by DogsController#show as HTML
 Completed 200 OK in 617ms (Views: 450.0ms | ActiveRecord: 15.4ms | Allocations: 1229319)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateToys (20200519210826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "toys" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200519210826"]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateToys (20200519210826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "toys"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20200519210826"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateToys (20200519210826)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "toys" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "dog_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200519210826"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.9ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 3]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.5ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 7]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 8]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Destroy (0.3ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.8ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "richi"], ["breed", "pug"], ["age", 9], ["created_at", "2020-05-19 21:12:51.794699"], ["updated_at", "2020-05-19 21:12:51.794699"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Roxy"], ["breed", "chihuahua"], ["age", 8], ["created_at", "2020-05-19 21:12:51.800577"], ["updated_at", "2020-05-19 21:12:51.800577"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.3ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlie"], ["breed", "Terrier"], ["age", 7], ["created_at", "2020-05-19 21:12:51.805084"], ["updated_at", "2020-05-19 21:12:51.805084"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.3ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gabe"], ["breed", "Pomareien"], ["age", 4], ["created_at", "2020-05-19 21:12:51.809111"], ["updated_at", "2020-05-19 21:12:51.809111"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dogger"], ["breed", "Corgi"], ["age", 8], ["created_at", "2020-05-19 21:12:51.813382"], ["updated_at", "2020-05-19 21:12:51.813382"]]
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mToy Create (0.7ms)[0m  [1m[32mINSERT INTO "toys" ("name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nemo"], ["dog_id", 10], ["created_at", "2020-05-19 21:12:51.841162"], ["updated_at", "2020-05-19 21:12:51.841162"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mToy Create (0.4ms)[0m  [1m[32mINSERT INTO "toys" ("name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Teddy"], ["dog_id", 10], ["created_at", "2020-05-19 21:12:51.847163"], ["updated_at", "2020-05-19 21:12:51.847163"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mToy Create (0.4ms)[0m  [1m[32mINSERT INTO "toys" ("name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pooh"], ["dog_id", 10], ["created_at", "2020-05-19 21:12:51.853210"], ["updated_at", "2020-05-19 21:12:51.853210"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2020-05-19 16:20:02 -0500
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.6ms | Allocations: 315)
+Completed 200 OK in 25ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 1600)
+
+
+Started GET "/toys" for ::1 at 2020-05-19 16:20:07 -0500
+Processing by ToysController#index as HTML
+  Rendering toys/index.html.erb within layouts/application
+  [1m[36mToy Load (0.6ms)[0m  [1m[34mSELECT "toys".* FROM "toys"[0m
+  ↳ app/views/toys/index.html.erb:2
+  Rendered toys/index.html.erb within layouts/application (Duration: 19.0ms | Allocations: 4467)
+Completed 200 OK in 153ms (Views: 140.5ms | ActiveRecord: 1.8ms | Allocations: 23189)
+
+
+Started GET "/toys/3" for ::1 at 2020-05-19 16:23:00 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.7ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:14:in `current_toy'
+  Rendering toys/show.html.erb within layouts/application
+  Rendered toys/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 115)
+Completed 200 OK in 33ms (Views: 6.1ms | ActiveRecord: 1.9ms | Allocations: 7959)
+
+
+Started GET "/toys/3" for ::1 at 2020-05-19 16:24:07 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:14:in `current_toy'
+  Rendering toys/show.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/views/toys/show.html.erb:2
+  Rendered toys/show.html.erb within layouts/application (Duration: 29.6ms | Allocations: 9548)
+Completed 200 OK in 38ms (Views: 34.2ms | ActiveRecord: 1.0ms | Allocations: 12863)
+
+
+Started GET "/toys/new" for ::1 at 2020-05-19 16:28:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  Rendered toys/new.html.erb within layouts/application (Duration: 21.5ms | Allocations: 2539)
+Completed 200 OK in 42ms (Views: 28.4ms | ActiveRecord: 1.5ms | Allocations: 9181)
+
+
+Started GET "/toys/new" for ::1 at 2020-05-19 16:30:57 -0500
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 116.4ms | Allocations: 8680)
+Completed 200 OK in 124ms (Views: 122.0ms | ActiveRecord: 1.3ms | Allocations: 11259)
+
+
+Started GET "/toys/new" for ::1 at 2020-05-19 16:31:47 -0500
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  Rendered toys/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 4081)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 5099)
+
+
+  
+ActionView::Template::Error (undefined method `map' for :dog_id:Symbol
+Did you mean?  tap):
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+    5: 
+    6: <%= f.collection_select  Dog.all, :dog_id, :id, :name %>
+    7: 
+    8: <%= f.submit %>
+    9: 
+  
+app/views/toys/new.html.erb:6
+app/views/toys/new.html.erb:1
+Started GET "/toys/new" for ::1 at 2020-05-19 16:34:57 -0500
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1837)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 4464)
+
+
+Started POST "/toys" for ::1 at 2020-05-19 16:35:09 -0500
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"TxJI0o8+1m58hPwvirWQqKin1AIx8/b9UhCW85DJ+L+Pigd6rPiSvK1AYX7ZQaQcQMAC1GwcZ0bMaVdbL41aQA==", "toy"=>{"name"=>"mickey mouse", "dog_id"=>"12"}, "commit"=>"Create Toy"}
+Completed 500 Internal Server Error in 126180ms (ActiveRecord: 0.0ms | Allocations: 50786)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/toys_controller.rb:19:in `create'
+Started GET "/toys/new" for ::1 at 2020-05-19 16:37:19 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (7.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 258.2ms | Allocations: 1509529)
+Completed 200 OK in 514ms (Views: 318.0ms | ActiveRecord: 28.2ms | Allocations: 2896277)
+
+
+Started POST "/toys" for ::1 at 2020-05-19 16:37:36 -0500
+Processing by ToysController#create as HTML
+  Parameters: {"authenticity_token"=>"8MO5GBzQpQ5bOCeqd+jVtWd7/omEETP3AN1oCaeqs0IwW/awPxbh3Ir8uvskHOEBjxwoX9n+okyepKmhGO4RvQ==", "toy"=>{"name"=>"mickey mouse", "dog_id"=>"12"}, "commit"=>"Create Toy"}
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/toys_controller.rb:19:in `create'
+  [1m[36mDog Load (1.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:19:in `create'
+  [1m[36mToy Create (7.9ms)[0m  [1m[32mINSERT INTO "toys" ("name", "dog_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "mickey mouse"], ["dog_id", 12], ["created_at", "2020-05-19 21:37:36.563815"], ["updated_at", "2020-05-19 21:37:36.563815"]]
+  ↳ app/controllers/toys_controller.rb:19:in `create'
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/toys_controller.rb:19:in `create'
+Redirected to http://localhost:3000/toys/4
+Completed 302 Found in 309ms (ActiveRecord: 12.3ms | Allocations: 1454207)
+
+
+Started GET "/toys/4" for ::1 at 2020-05-19 16:37:36 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (1.6ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:25:in `current_toy'
+  Rendering toys/show.html.erb within layouts/application
+  [1m[36mDog Load (6.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/views/toys/show.html.erb:2
+  Rendered toys/show.html.erb within layouts/application (Duration: 110.3ms | Allocations: 416040)
+Completed 200 OK in 367ms (Views: 243.7ms | ActiveRecord: 8.2ms | Allocations: 1756563)
+
+
+Started GET "/toys/new" for ::1 at 2020-05-19 16:40:56 -0500
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (2.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/new.html.erb:6
+  Rendered toys/new.html.erb within layouts/application (Duration: 465.8ms | Allocations: 2029581)
+Completed 200 OK in 1046ms (Views: 682.5ms | ActiveRecord: 40.2ms | Allocations: 4590163)
+
+
+Started GET "/toys/4/edit" for ::1 at 2020-05-19 16:43:17 -0500
+  [1m[35m (9.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (1.4ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:30:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 2564.0ms | Allocations: 17550403)
+Completed 500 Internal Server Error in 2881ms (ActiveRecord: 17.0ms | Allocations: 19608358)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb07a6258>:0x00007f8bb0a96fd0>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :post do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/4/edit" for ::1 at 2020-05-19 16:44:23 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (2.0ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:30:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 3059.9ms | Allocations: 17485169)
+Completed 500 Internal Server Error in 3186ms (ActiveRecord: 2.0ms | Allocations: 18162402)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb14aee78>:0x00007f8bb1bc1d78>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/4/edit" for ::1 at 2020-05-19 16:45:28 -0500
+  [1m[35m (7.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (2.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 2672.2ms | Allocations: 17554306)
+Completed 500 Internal Server Error in 3030ms (ActiveRecord: 22.9ms | Allocations: 19610281)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb1b73b78>:0x00007f8bb1555278>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:46:08 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (7.5ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 2638.4ms | Allocations: 17468489)
+Completed 500 Internal Server Error in 2726ms (ActiveRecord: 7.5ms | Allocations: 17958976)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb1b73b78>:0x00007f8bb13e35e8>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:47:13 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (1.7ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 2817.6ms | Allocations: 17514458)
+Completed 500 Internal Server Error in 2973ms (ActiveRecord: 1.7ms | Allocations: 18191584)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb0635658>:0x00007f8bb1a598f0>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:48:01 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (4.3ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  [1m[36mCACHE Toy Load (0.7ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:26:in `edit'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 3385.1ms | Allocations: 17509828)
+Completed 500 Internal Server Error in 3776ms (ActiveRecord: 21.7ms | Allocations: 19604045)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb1cd1b00>:0x00007f8bb1a4a7b0>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:49:53 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (2.6ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 0.8ms | Allocations: 93)
+Completed 200 OK in 11358ms (Views: 9.8ms | ActiveRecord: 50.3ms | Allocations: 1709361)
+
+
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:50:38 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 193.0ms | Allocations: 58299)
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 0.7ms | Allocations: 64053)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb1d7a020>:0x00007f8bb1d78428>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:51:07 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 194.6ms | Allocations: 58285)
+Completed 500 Internal Server Error in 202ms (ActiveRecord: 0.1ms | Allocations: 59828)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb079dd38>:0x00007f8bb0b36b20>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:51:34 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 200.5ms | Allocations: 58307)
+Completed 500 Internal Server Error in 207ms (ActiveRecord: 0.2ms | Allocations: 59850)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb076d480>:0x00007f8bb1e5f5f8>
+Did you mean?  toys_path):
+    1: <%= form_for @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:51:38 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:34:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  Rendered toys/edit.html.erb within layouts/application (Duration: 172.3ms | Allocations: 58125)
+Completed 500 Internal Server Error in 175ms (ActiveRecord: 0.2ms | Allocations: 58931)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb076d480>:0x00007f8bb14ace70>
+Did you mean?  toys_path):
+    1: <%= form_for @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/edit.html.erb:1
+Started GET "/toys/new" for ::1 at 2020-05-19 16:53:45 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#new as HTML
+  Rendering toys/new.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/_form.html.erb:6
+  Rendered toys/_form.html.erb (Duration: 34.1ms | Allocations: 5786)
+  Rendered toys/new.html.erb within layouts/application (Duration: 35.2ms | Allocations: 6083)
+Completed 200 OK in 70ms (Views: 41.2ms | ActiveRecord: 1.2ms | Allocations: 13449)
+
+
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:53:51 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:35:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  Rendered toys/_form.html.erb (Duration: 223.1ms | Allocations: 63160)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 224.2ms | Allocations: 63309)
+Completed 500 Internal Server Error in 228ms (ActiveRecord: 0.6ms | Allocations: 64417)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb1240cb8>:0x00007f8bb09f2d18>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy, method: :patch do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/_form.html.erb:1
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:54:10 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:35:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  Rendered toys/_form.html.erb (Duration: 215.4ms | Allocations: 63311)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 217.0ms | Allocations: 63599)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.6ms | Allocations: 65153)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb0a9dc18>:0x00007f8bb0aa6db8>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/_form.html.erb:1
+app/views/toys/edit.html.erb:1
+Started POST "/__web_console/repl_sessions/979882be595ad537b44c5222dce17518/trace" for ::1 at 2020-05-19 16:54:27 -0500
+Started POST "/__web_console/repl_sessions/979882be595ad537b44c5222dce17518/trace" for ::1 at 2020-05-19 16:54:29 -0500
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:55:08 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:36:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/_form.html.erb:6
+  Rendered toys/_form.html.erb (Duration: 18.5ms | Allocations: 5582)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 18.7ms | Allocations: 5646)
+Completed 200 OK in 56ms (Views: 33.0ms | ActiveRecord: 4.8ms | Allocations: 13080)
+
+
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:55:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:36:in `current_toy'
+  [1m[36mCACHE Toy Load (0.0ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:27:in `edit'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  Rendered toys/_form.html.erb (Duration: 216.6ms | Allocations: 67118)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 216.9ms | Allocations: 67185)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 1.9ms | Allocations: 73501)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb1ac9df8>:0x00007f8bb1af2730>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/_form.html.erb:1
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:56:11 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:35:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/_form.html.erb:6
+  Rendered toys/_form.html.erb (Duration: 32.8ms | Allocations: 5652)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 33.2ms | Allocations: 5716)
+Completed 200 OK in 54ms (Views: 36.3ms | ActiveRecord: 2.4ms | Allocations: 12972)
+
+
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:56:34 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:35:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  [1m[36mCACHE Dog Load (0.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ app/views/toys/edit.html.erb:1
+  Rendered toys/_form.html.erb (Duration: 564.4ms | Allocations: 67588)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 564.8ms | Allocations: 67655)
+Completed 500 Internal Server Error in 615ms (ActiveRecord: 9.6ms | Allocations: 73466)
+
+
+  
+ActionView::Template::Error (undefined method `toy_path' for #<#<Class:0x00007f8bb063d998>:0x00007f8bb062ef88>
+Did you mean?  toys_path):
+    1: <%= form_with model: @toy do |f| %>
+    2: 
+    3: <%= f.label :name %>
+    4: <%= f.text_field :name %>
+  
+app/views/toys/_form.html.erb:1
+app/views/toys/edit.html.erb:1
+Started GET "/toys/3/edit" for ::1 at 2020-05-19 16:57:06 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mToy Load (0.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:35:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/_form.html.erb:6
+  Rendered toys/_form.html.erb (Duration: 13.3ms | Allocations: 5660)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 13.7ms | Allocations: 5724)
+Completed 200 OK in 50ms (Views: 36.7ms | ActiveRecord: 2.5ms | Allocations: 12978)
+
+
+Started GET "/toys/4/edit" for ::1 at 2020-05-19 16:57:45 -0500
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (0.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:35:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/_form.html.erb:6
+  Rendered toys/_form.html.erb (Duration: 3.2ms | Allocations: 1664)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1728)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.3ms | Allocations: 3948)
+
+
+Started PATCH "/toys/4/edit" for ::1 at 2020-05-19 16:58:15 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/toys/4/edit"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/toys/4/edit" for ::1 at 2020-05-19 16:59:31 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (0.2ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:35:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/_form.html.erb:6
+  Rendered toys/_form.html.erb (Duration: 17.3ms | Allocations: 5628)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 17.5ms | Allocations: 5692)
+Completed 200 OK in 38ms (Views: 19.4ms | ActiveRecord: 2.2ms | Allocations: 12946)
+
+
+Started PATCH "/toys/4" for ::1 at 2020-05-19 16:59:35 -0500
+Processing by ToysController#update as HTML
+  Parameters: {"authenticity_token"=>"Nu1BVvRIX6XxxxnEVbpkj42r57mpUpKk3+XFYWjZ/IGvbwbvCZhu2Nhr9GDzN01z+Q3ExpsZAdKdbWnnY9+XxA==", "toy"=>{"name"=>"mickey mouse", "dog_id"=>"14"}, "commit"=>"Update Toy", "id"=>"4"}
+Completed 500 Internal Server Error in 68010ms (ActiveRecord: 0.0ms | Allocations: 89904)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/toys_controller.rb:32:in `update'
+Started GET "/toys/4/edit" for ::1 at 2020-05-19 17:00:56 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ToysController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (4.7ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:38:in `current_toy'
+  Rendering toys/edit.html.erb within layouts/application
+  [1m[36mDog Load (2.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/toys/_form.html.erb:6
+  Rendered toys/_form.html.erb (Duration: 258.6ms | Allocations: 1341150)
+  Rendered toys/edit.html.erb within layouts/application (Duration: 280.1ms | Allocations: 1374443)
+Completed 200 OK in 654ms (Views: 346.7ms | ActiveRecord: 25.6ms | Allocations: 3153398)
+
+
+Started PATCH "/toys/4" for ::1 at 2020-05-19 17:01:04 -0500
+Processing by ToysController#update as HTML
+  Parameters: {"authenticity_token"=>"iosEethDsDSb+vimHhfedRVVqmY2CXPCd2K3euQI8jgTCUPDJZOBSbJWFQK4mveJYfOJGQRC4LQ16hv87w6ZfQ==", "toy"=>{"name"=>"mickey mouse", "dog_id"=>"14"}, "commit"=>"Update Toy", "id"=>"4"}
+  [1m[36mToy Load (1.1ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:38:in `current_toy'
+  [1m[35m (1.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/toys_controller.rb:32:in `update'
+  [1m[36mDog Load (2.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:32:in `update'
+  [1m[36mToy Update (1.3ms)[0m  [1m[33mUPDATE "toys" SET "dog_id" = ?, "updated_at" = ? WHERE "toys"."id" = ?[0m  [["dog_id", 14], ["updated_at", "2020-05-19 22:01:04.328036"], ["id", 4]]
+  ↳ app/controllers/toys_controller.rb:32:in `update'
+  [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/toys_controller.rb:32:in `update'
+Redirected to http://localhost:3000/toys/4
+Completed 302 Found in 313ms (ActiveRecord: 9.4ms | Allocations: 1510594)
+
+
+Started GET "/toys/4" for ::1 at 2020-05-19 17:01:04 -0500
+Processing by ToysController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mToy Load (8.9ms)[0m  [1m[34mSELECT "toys".* FROM "toys" WHERE "toys"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/toys_controller.rb:38:in `current_toy'
+  Rendering toys/show.html.erb within layouts/application
+  [1m[36mDog Load (3.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 14], ["LIMIT", 1]]
+  ↳ app/views/toys/show.html.erb:2
+  Rendered toys/show.html.erb within layouts/application (Duration: 69.3ms | Allocations: 276258)
+Completed 200 OK in 301ms (Views: 172.5ms | ActiveRecord: 12.6ms | Allocations: 1462489)
+
+

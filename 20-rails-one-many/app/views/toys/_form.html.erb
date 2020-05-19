@@ -1,0 +1,11 @@
+<%= form_with model: @toy do |f| %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.collection_select :dog_id, @dogs, :id, :name %>
+
+<%= f.submit %>
+
+
+<% end %>
