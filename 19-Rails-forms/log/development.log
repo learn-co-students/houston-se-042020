@@ -1,0 +1,921 @@
+Started GET "/" for ::1 at 2020-05-15 14:56:42 -0500
+  [1m[35m (8.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.4ms | Allocations: 481)
+Completed 200 OK in 65ms (Views: 39.4ms | ActiveRecord: 0.0ms | Allocations: 2636)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDogs (20200515200907)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "dogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "breed" varchar, "age" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200515200907"]]
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-15 20:10:27.089965"], ["updated_at", "2020-05-15 20:10:27.089965"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/dogs" for ::1 at 2020-05-15 15:17:19 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  Rendered dogs/index.html.erb within layouts/application (Duration: 5.3ms | Allocations: 206)
+Completed 200 OK in 244ms (Views: 237.8ms | ActiveRecord: 0.0ms | Allocations: 16097)
+
+
+Started GET "/dogs" for ::1 at 2020-05-15 15:25:58 -0500
+  [1m[35m (15.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (1.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:1
+  Rendered dogs/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 1252)
+Completed 200 OK in 156ms (Views: 127.4ms | ActiveRecord: 1.6ms | Allocations: 7108)
+
+
+Started GET "/dogs" for ::1 at 2020-05-15 15:26:03 -0500
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:1
+  Rendered dogs/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 607)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 2409)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.9ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "richi"], ["breed", "pug"], ["age", 9], ["created_at", "2020-05-15 20:31:08.032520"], ["updated_at", "2020-05-15 20:31:08.032520"]]
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.6ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Roxy"], ["breed", "chihuahua"], ["age", 8], ["created_at", "2020-05-15 20:31:08.046047"], ["updated_at", "2020-05-15 20:31:08.046047"]]
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.3ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Charlie"], ["breed", "Terrier"], ["age", 7], ["created_at", "2020-05-15 20:31:08.055935"], ["updated_at", "2020-05-15 20:31:08.055935"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Gabe"], ["breed", "Pomareien"], ["age", 4], ["created_at", "2020-05-15 20:31:08.061706"], ["updated_at", "2020-05-15 20:31:08.061706"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDog Create (0.6ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Dogger"], ["breed", "Corgi"], ["age", 8], ["created_at", "2020-05-15 20:31:08.074187"], ["updated_at", "2020-05-15 20:31:08.074187"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/dogs" for ::1 at 2020-05-15 15:31:35 -0500
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (8.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 97.1ms | Allocations: 5279)
+Completed 200 OK in 252ms (Views: 185.9ms | ActiveRecord: 14.7ms | Allocations: 11053)
+
+
+Started GET "/dogs/3" for ::1 at 2020-05-15 15:44:44 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 20239ms (ActiveRecord: 0.0ms | Allocations: 60498)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/dogs_controller.rb:10:in `show'
+Started GET "/dogs/3" for ::1 at 2020-05-15 15:45:42 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 500 Internal Server Error in 5974ms (ActiveRecord: 0.0ms | Allocations: 104401)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/dogs_controller.rb:10:in `show'
+Started GET "/dogs/3" for ::1 at 2020-05-15 15:46:01 -0500
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+Completed 406 Not Acceptable in 6209ms (ActiveRecord: 0.0ms | Allocations: 143338)
+
+
+  
+ActionController::MissingExactTemplate (DogsController#show is missing a template for request formats: text/html):
+  
+actionpack (6.0.3) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `tap'
+actionpack (6.0.3) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (6.0.3) lib/active_support/callbacks.rb:135:in `run_callbacks'
+actionpack (6.0.3) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack (2.2.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/dogs/3" for ::1 at 2020-05-15 15:46:53 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (0.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ (byebug):1:in `show'
+Completed 500 Internal Server Error in 87487ms (ActiveRecord: 2.2ms | Allocations: 24324)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `show'
+app/controllers/dogs_controller.rb:11:in `show'
+Started GET "/dogs/3" for ::1 at 2020-05-15 15:49:47 -0500
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mDog Load (4.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:11:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 15.1ms | Allocations: 44089)
+Completed 200 OK in 867ms (Views: 252.0ms | ActiveRecord: 32.0ms | Allocations: 2273379)
+
+
+Started GET "/" for ::1 at 2020-05-19 10:08:54 -0500
+  [1m[35m (12.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.7ms | Allocations: 315)
+Completed 200 OK in 26ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 1599)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:08:57 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:11:in `show'
+Completed 404 Not Found in 111ms (ActiveRecord: 1.9ms | Allocations: 2440)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Dog with 'id'=new):
+  
+app/controllers/dogs_controller.rb:11:in `show'
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:09:34 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:15:in `show'
+Completed 404 Not Found in 7ms (ActiveRecord: 1.5ms | Allocations: 2024)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Dog with 'id'=new):
+  
+app/controllers/dogs_controller.rb:15:in `show'
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:10:19 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 0.5ms | Allocations: 81)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 4739)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:10:33 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 1960)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:11:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 0.2ms | Allocations: 4)
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 1956)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:19:11 -0500
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 39.8ms | Allocations: 5423)
+Completed 200 OK in 77ms (Views: 56.5ms | ActiveRecord: 0.6ms | Allocations: 12592)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:20:05 -0500
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1344)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 3839)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:20:46 -0500
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 1345)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 3848)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:24:42 -0500
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1382)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 3890)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:25:03 -0500
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 1380)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 3874)
+
+
+Started POST "/dogs" for ::1 at 2020-05-19 10:25:51 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/dogs"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:29:13 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1173)
+Completed 200 OK in 31ms (Views: 8.8ms | ActiveRecord: 1.0ms | Allocations: 7355)
+
+
+Started POST "/dogs" for ::1 at 2020-05-19 10:29:21 -0500
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"x24X75wfEAm3I9jrp+zYmvAANuzgXf9YRCk30ZXtjmnxREMi7fD3ldvRDZ+/fr4D/mgJNbjw1uow2n9qd6eFCw==", "dog"=>{"name"=>"richi", "breed"=>"Pug", "age"=>"9"}, "commit"=>"Create Dog"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mDog Create (7.9ms)[0m  [1m[32mINSERT INTO "dogs" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", "2020-05-19 15:30:42.872055"], ["updated_at", "2020-05-19 15:30:42.872055"]]
+  ↳ (byebug):1:in `create'
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `create'
+Completed 500 Internal Server Error in 360075ms (ActiveRecord: 9.4ms | Allocations: 56610)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/dogs_controller.rb:22:in `create'
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:35:28 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 177.2ms | Allocations: 507398)
+Completed 200 OK in 699ms (Views: 329.9ms | ActiveRecord: 27.2ms | Allocations: 1927708)
+
+
+Started POST "/dogs" for ::1 at 2020-05-19 10:35:47 -0500
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"cXlJZ+rRfbCVnRNZBbhKqUgUdZFO2qL0pl4ru6c8SjpHUx2qmz6aLPlvxi0dKiwwRnxKSBZ3i0bSrWMARXZBWA==", "dog"=>{"name"=>"richi", "breed"=>"Pug", "age"=>"9"}, "commit"=>"Create Dog"}
+Completed 500 Internal Server Error in 92518ms (ActiveRecord: 0.0ms | Allocations: 243817)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:37:20 -0500
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/dogs_controller.rb:22:in `create'
+  [1m[35m (8.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 605.5ms | Allocations: 2097978)
+Completed 200 OK in 2648ms (Views: 2619.0ms | ActiveRecord: 0.0ms | Allocations: 10476057)
+
+
+Started POST "/dogs" for ::1 at 2020-05-19 10:37:32 -0500
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"oVJT49tqG6bjH/Oiu6d1AdinTi8nEJo8nue4i51Csx+XeAcuqoX8Oo/tJtajNROY1s9x9n+9s47qFPAwfwi4fQ==", "dog"=>{"name"=>"richi", "breed"=>"Pug", "age"=>"11"}, "commit"=>"Create Dog"}
+  [1m[35m (1.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+  [1m[36mDog Create (17.9ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "richi"], ["breed", "Pug"], ["age", 11], ["created_at", "2020-05-19 15:37:46.008352"], ["updated_at", "2020-05-19 15:37:46.008352"]]
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+  [1m[35m (9.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+Redirected to http://localhost:3000/dogs/7
+Completed 302 Found in 695ms (ActiveRecord: 85.4ms | Allocations: 2006996)
+
+
+Started GET "/dogs/7" for ::1 at 2020-05-19 10:37:46 -0500
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mDog Load (2.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 8.9ms | Allocations: 41069)
+Completed 200 OK in 699ms (Views: 198.1ms | ActiveRecord: 40.5ms | Allocations: 2019500)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started GET "/dogs/new" for ::1 at 2020-05-19 10:42:25 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (Duration: 38.4ms | Allocations: 3165)
+Completed 200 OK in 165ms (Views: 119.6ms | ActiveRecord: 4.2ms | Allocations: 12980)
+
+
+Started POST "/dogs" for ::1 at 2020-05-19 10:42:38 -0500
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"jIo/JDVoK/h7vLkuoMO5R24KRbUdfE7tBkyeuFDLtZW6oGvpRIfMZBdObFq4Ud/eYGJ6bEXRZ19yv9YDsoG+9w==", "dog"=>{"name"=>"Bozo", "breed"=>"Corgi", "age"=>"5"}, "commit"=>"Create Dog"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+  [1m[36mDog Create (1.6ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bozo"], ["breed", "Corgi"], ["age", 5], ["created_at", "2020-05-19 15:42:38.588995"], ["updated_at", "2020-05-19 15:42:38.588995"]]
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+Redirected to http://localhost:3000/dogs/8
+Completed 302 Found in 14ms (ActiveRecord: 3.9ms | Allocations: 2985)
+
+
+Started GET "/dogs/8" for ::1 at 2020-05-19 10:42:38 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 141)
+Completed 200 OK in 42ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 3053)
+
+
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/vidhi.sharma/.rvm/gems/ruby-2.6.1/bin/rake:23)
+Started GET "/dogs/8/edit" for ::1 at 2020-05-19 11:00:53 -0500
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 1.1ms | Allocations: 199)
+Completed 200 OK in 129ms (Views: 110.9ms | ActiveRecord: 0.0ms | Allocations: 5619)
+
+
+Started GET "/dogs/8/edit" for ::1 at 2020-05-19 11:02:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:35:in `edit'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 26.8ms | Allocations: 3054)
+Completed 200 OK in 75ms (Views: 42.6ms | ActiveRecord: 1.0ms | Allocations: 11277)
+
+
+Started PATCH "/dogs/8" for ::1 at 2020-05-19 11:03:56 -0500
+  
+ActionController::RoutingError (No route matches [PATCH] "/dogs/8"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.2) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.2) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.2) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/dogs/8/edit" for ::1 at 2020-05-19 11:05:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (0.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:35:in `edit'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1251)
+Completed 200 OK in 72ms (Views: 15.9ms | ActiveRecord: 7.5ms | Allocations: 8221)
+
+
+Started PATCH "/dogs/8" for ::1 at 2020-05-19 11:05:14 -0500
+Processing by DogsController#update as HTML
+  Parameters: {"authenticity_token"=>"pVE+N3nfK1JKsd6A0ZMaL2yQkjA7YDtZNQtm/npFaktOtECADLFELO0dqDDIh2ZNjsAH4gbEzUcEs/HOjPmcpg==", "dog"=>{"name"=>"Bozo", "breed"=>"Corgi", "age"=>"7"}, "commit"=>"Update Dog", "id"=>"8"}
+Completed 500 Internal Server Error in 101281ms (ActiveRecord: 0.0ms | Allocations: 114998)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/dogs_controller.rb:40:in `update'
+Started GET "/dogs/8/edit" for ::1 at 2020-05-19 11:07:03 -0500
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (12.8ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:32:in `edit'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 158.6ms | Allocations: 531306)
+Completed 200 OK in 743ms (Views: 314.5ms | ActiveRecord: 37.5ms | Allocations: 2154234)
+
+
+Started PATCH "/dogs/8" for ::1 at 2020-05-19 11:07:21 -0500
+Processing by DogsController#update as HTML
+  Parameters: {"authenticity_token"=>"GHy2UkZAKzUFAIQ7LqycIXUIGuXq3cazsevxKq49Xn7zmcjlMy5ES6Ks8os3uOBDl1iPN9d5MK2AU2YaWIGokw==", "dog"=>{"name"=>"Bozo", "breed"=>"Corgi", "age"=>"7"}, "commit"=>"Update Dog", "id"=>"8"}
+  [1m[36mDog Load (13.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:37:in `update'
+  [1m[35m (2.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:38:in `update'
+  [1m[36mDog Update (39.3ms)[0m  [1m[33mUPDATE "dogs" SET "age" = ?, "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["age", 7], ["updated_at", "2020-05-19 16:07:21.432866"], ["id", 8]]
+  ↳ app/controllers/dogs_controller.rb:38:in `update'
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:38:in `update'
+Redirected to http://localhost:3000/dogs/8
+Completed 302 Found in 742ms (ActiveRecord: 61.8ms | Allocations: 1381575)
+
+
+Started GET "/dogs/8" for ::1 at 2020-05-19 11:07:22 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (3.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 23.5ms | Allocations: 41066)
+Completed 200 OK in 300ms (Views: 167.1ms | ActiveRecord: 3.5ms | Allocations: 865726)
+
+
+Started GET "/dogs/8/edit" for ::1 at 2020-05-19 11:10:03 -0500
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (5.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:32:in `edit'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (Duration: 271.3ms | Allocations: 696068)
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 307.8ms | Allocations: 791033)
+Completed 200 OK in 751ms (Views: 589.9ms | ActiveRecord: 5.4ms | Allocations: 1835352)
+
+
+Started PATCH "/dogs/8" for ::1 at 2020-05-19 11:10:13 -0500
+Processing by DogsController#update as HTML
+  Parameters: {"authenticity_token"=>"QOtJgYHWlYvQ8ZXSy9tUD9NutWXn+OK9J1fPfiHa05irDjc29Lj69Xdd42LSzyhtMT4gt9pcFKMW71hO12YldQ==", "dog"=>{"name"=>"Bozo", "breed"=>"Corgi", "age"=>"9"}, "commit"=>"Update Dog", "id"=>"8"}
+  [1m[36mDog Load (15.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:37:in `update'
+  [1m[35m (3.7ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:38:in `update'
+  [1m[36mDog Update (29.2ms)[0m  [1m[33mUPDATE "dogs" SET "age" = ?, "updated_at" = ? WHERE "dogs"."id" = ?[0m  [["age", 9], ["updated_at", "2020-05-19 16:10:13.470927"], ["id", 8]]
+  ↳ app/controllers/dogs_controller.rb:38:in `update'
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:38:in `update'
+Redirected to http://localhost:3000/dogs/8
+Completed 302 Found in 726ms (ActiveRecord: 54.0ms | Allocations: 1646787)
+
+
+Started GET "/dogs/8" for ::1 at 2020-05-19 11:10:14 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (2.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 21.2ms | Allocations: 47096)
+Completed 200 OK in 369ms (Views: 214.7ms | ActiveRecord: 2.6ms | Allocations: 993297)
+
+
+Started GET "/dogs/new" for ::1 at 2020-05-19 11:10:21 -0500
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (Duration: 434.8ms | Allocations: 634142)
+  Rendered dogs/new.html.erb within layouts/application (Duration: 448.9ms | Allocations: 700855)
+Completed 200 OK in 660ms (Views: 625.4ms | ActiveRecord: 0.0ms | Allocations: 1414438)
+
+
+Started POST "/dogs" for ::1 at 2020-05-19 11:10:45 -0500
+Processing by DogsController#create as HTML
+  Parameters: {"authenticity_token"=>"vmHAlye53Rs5sYd82eXKRwdXT5QeuFjQ7xWadZqS5JqIS5RaVlY6h1VDUgjBd6zeCT9wTUYVcWKb5tLOeNjv+A==", "dog"=>{"name"=>"robort", "breed"=>"Mix", "age"=>"4"}, "commit"=>"Create Dog"}
+  [1m[35m (8.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+  [1m[36mDog Create (9.3ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "breed", "age", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "robort"], ["breed", "Mix"], ["age", 4], ["created_at", "2020-05-19 16:10:45.740441"], ["updated_at", "2020-05-19 16:10:45.740441"]]
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:22:in `create'
+Redirected to http://localhost:3000/dogs/9
+Completed 302 Found in 421ms (ActiveRecord: 26.9ms | Allocations: 1103415)
+
+
+Started GET "/dogs/9" for ::1 at 2020-05-19 11:10:46 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (2.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 2.9ms | Allocations: 23294)
+Completed 200 OK in 377ms (Views: 257.5ms | ActiveRecord: 2.5ms | Allocations: 982948)
+
+
+Started GET "/dogs/9/edit" for ::1 at 2020-05-19 11:17:33 -0500
+  [1m[35m (11.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (4.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:32:in `edit'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (Duration: 58.3ms | Allocations: 52449)
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 99.2ms | Allocations: 148060)
+Completed 500 Internal Server Error in 816ms (ActiveRecord: 4.3ms | Allocations: 1804796)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= #form_with model: @dog do |f| %>
+<%= form_with @dog do |f| %>
+
+<%= f.label "Name" %>
+<%= f.text_field :name %>
+
+<%= f.label :breed %>
+<%= f.text_field :breed %>
+
+<%= f.label :age %>
+<%= f.text_field :age %>
+
+<%= f.submit %>
+
+<%end%>
+):
+1:    <%= #form_with model: @dog do |f| %>
+2:    <%= form_with @dog do |f| %>
+3:    
+4:    <%= f.label "Name" %>
+5:    <%= f.text_field :name %>
+6:    
+7:    <%= f.label :breed %>
+8:    <%= f.text_field :breed %>
+9:    
+10:    <%= f.label :age %>
+11:    <%= f.text_field :age %>
+12:    
+13:    <%= f.submit %>
+14:    
+15:    <%end%>
+  
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/edit.html.erb:3
+Started GET "/dogs/9/edit" for ::1 at 2020-05-19 11:18:01 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (14.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:32:in `edit'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (Duration: 18.8ms | Allocations: 51353)
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 991.3ms | Allocations: 3206801)
+Completed 500 Internal Server Error in 3014ms (ActiveRecord: 14.4ms | Allocations: 9158197)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= #form_with model: @dog do |f| %>
+<%= form_for @dog do |f| %>
+
+<%= f.label "Name" %>
+<%= f.text_field :name %>
+
+<%= f.label :breed %>
+<%= f.text_field :breed %>
+
+<%= f.label :age %>
+<%= f.text_field :age %>
+
+<%= f.submit %>
+
+<%end%>
+):
+1:    <%= #form_with model: @dog do |f| %>
+2:    <%= form_for @dog do |f| %>
+3:    
+4:    <%= f.label "Name" %>
+5:    <%= f.text_field :name %>
+6:    
+7:    <%= f.label :breed %>
+8:    <%= f.text_field :breed %>
+9:    
+10:    <%= f.label :age %>
+11:    <%= f.text_field :age %>
+12:    
+13:    <%= f.submit %>
+14:    
+15:    <%end%>
+  
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/_form.html.erb:17: unterminated string meets end of file
+app/views/dogs/_form.html.erb:17: syntax error, unexpected end-of-input, expecting end
+app/views/dogs/edit.html.erb:3
+Started GET "/dogs/9/edit" for ::1 at 2020-05-19 11:18:26 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (3.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:32:in `edit'
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/_form.html.erb (Duration: 628.8ms | Allocations: 2212741)
+  Rendered dogs/edit.html.erb within layouts/application (Duration: 2751.6ms | Allocations: 8751373)
+Completed 200 OK in 7560ms (Views: 6780.7ms | ActiveRecord: 3.1ms | Allocations: 22564100)
+
+
+Started GET "/dogs" for ::1 at 2020-05-19 11:21:41 -0500
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (13.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 219.8ms | Allocations: 440627)
+Completed 200 OK in 684ms (Views: 527.1ms | ActiveRecord: 13.0ms | Allocations: 1357057)
+
+
+Started GET "/dogs/6" for ::1 at 2020-05-19 11:21:49 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDog Load (2.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 30.8ms | Allocations: 42806)
+Completed 200 OK in 392ms (Views: 269.4ms | ActiveRecord: 2.4ms | Allocations: 982208)
+
+
+Started GET "/dogs" for ::1 at 2020-05-19 11:22:03 -0500
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (2.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 180.2ms | Allocations: 409319)
+Completed 200 OK in 487ms (Views: 394.5ms | ActiveRecord: 2.3ms | Allocations: 1136210)
+
+
+Started GET "/dogs/9" for ::1 at 2020-05-19 11:22:06 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (26.0ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 23294)
+Completed 200 OK in 388ms (Views: 252.1ms | ActiveRecord: 26.0ms | Allocations: 929913)
+
+
+Started GET "/dogs/9" for ::1 at 2020-05-19 11:24:42 -0500
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (1.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 141.8ms | Allocations: 381406)
+Completed 200 OK in 1151ms (Views: 377.7ms | ActiveRecord: 46.9ms | Allocations: 2710792)
+
+
+Started GET "/dogs/9" for ::1 at 2020-05-19 11:25:47 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (4.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 167.3ms | Allocations: 253313)
+Completed 200 OK in 613ms (Views: 439.0ms | ActiveRecord: 4.7ms | Allocations: 1296642)
+
+
+Started GET "/dogs/9" for ::1 at 2020-05-19 11:26:14 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mDog Load (1.8ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 138.7ms | Allocations: 280451)
+Completed 200 OK in 1020ms (Views: 359.0ms | ActiveRecord: 35.1ms | Allocations: 2462988)
+
+
+Started DELETE "/dogs/9" for ::1 at 2020-05-19 11:26:23 -0500
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"nWzZU4Dx7L/nEcTefHKWp/6cFAPv76Aqk5efyaYz5BbjzLW5kJZU2nKsgheSS1Ih7tB8ecNUqR0UgCUBQjRhgA==", "commit"=>"delete dog", "id"=>"9"}
+Completed 500 Internal Server Error in 7798ms (ActiveRecord: 0.0ms | Allocations: 260693)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `destroy'
+app/controllers/dogs_controller.rb:45:in `destroy'
+Started GET "/dogs" for ::1 at 2020-05-19 11:27:20 -0500
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (6.6ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 491.4ms | Allocations: 1514599)
+Completed 200 OK in 833ms (Views: 691.9ms | ActiveRecord: 39.9ms | Allocations: 2437070)
+
+
+Started GET "/dogs/6" for ::1 at 2020-05-19 11:27:29 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mDog Load (4.1ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:12:in `show'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 141.2ms | Allocations: 278742)
+Completed 200 OK in 510ms (Views: 358.8ms | ActiveRecord: 4.1ms | Allocations: 1219141)
+
+
+Started DELETE "/dogs/6" for ::1 at 2020-05-19 11:27:33 -0500
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hKNQ9aQ1A7IgUlCz62Wq4ZpchYARgrUxTrNm8oY/wQHpnXswIHKgSX7qECpVpIDpKv3xOD0FTC+G49R4IpMSpw==", "commit"=>"delete dog", "id"=>"6"}
+  [1m[36mDog Load (43.3ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:45:in `destroy'
+  [1m[35m (20.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:46:in `destroy'
+  [1m[36mDog Destroy (23.5ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 6]]
+  ↳ app/controllers/dogs_controller.rb:46:in `destroy'
+  [1m[35m (60.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:46:in `destroy'
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 1069ms (ActiveRecord: 147.0ms | Allocations: 1250925)
+
+
+Started GET "/dogs" for ::1 at 2020-05-19 11:27:34 -0500
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (1.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 256.5ms | Allocations: 673424)
+Completed 200 OK in 577ms (Views: 517.0ms | ActiveRecord: 1.5ms | Allocations: 1463581)
+
+
+Started GET "/dogs" for ::1 at 2020-05-19 11:29:55 -0500
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#index as HTML
+Completed 404 Not Found in 237ms (ActiveRecord: 29.4ms | Allocations: 695221)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Dog without an ID):
+  
+app/controllers/dogs_controller.rb:54:in `current_dog'
+Started GET "/dogs" for ::1 at 2020-05-19 11:32:14 -0500
+  [1m[35m (19.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (39.5ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (Duration: 512.1ms | Allocations: 1462758)
+Completed 200 OK in 884ms (Views: 666.4ms | ActiveRecord: 71.1ms | Allocations: 2371799)
+
+
+Started GET "/dogs/8" for ::1 at 2020-05-19 11:32:27 -0500
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mDog Load (15.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:54:in `current_dog'
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (Duration: 87.7ms | Allocations: 280442)
+Completed 200 OK in 617ms (Views: 450.0ms | ActiveRecord: 15.4ms | Allocations: 1229319)
+
+
