@@ -1,0 +1,20 @@
+<% if flash[:errors]%>
+    <% flash[:errors].each do |e| %>
+        <li style="color: red">
+            <%= e %>
+        </li>
+    <%end%>
+<%end%>
+
+<%= form_with model:@movie do |f| %>
+<%= f.label :title %>
+<%= f.text_field :title %>
+<br/>
+<%= f.label :year %>
+<%= f.number_field :year %>
+<br/>
+<%= f.collection_check_boxes :actor_ids, @actors, :id, :name %>
+
+<%= f.submit %>
+
+<%end%>

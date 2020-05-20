@@ -4819,3 +4819,588 @@ SystemExit (exit):
 (byebug):1:in `exit'
 (byebug):1:in `create'
 app/controllers/movies_controller.rb:19:in `create'
+Started GET "/actors" for ::1 at 2020-05-20 10:14:47 -0500
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/actors"):
+  
+actionpack (6.0.2.1) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.0.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.0.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.0.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.1) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.1) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.1) lib/rails/engine.rb:526:in `call'
+puma (4.3.1) lib/puma/configuration.rb:228:in `call'
+puma (4.3.1) lib/puma/server.rb:681:in `handle_request'
+puma (4.3.1) lib/puma/server.rb:472:in `process_client'
+puma (4.3.1) lib/puma/server.rb:328:in `block in run'
+puma (4.3.1) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/movies" for ::1 at 2020-05-20 10:14:55 -0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:2
+  Rendered movies/index.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4264)
+Completed 200 OK in 326ms (Views: 147.0ms | ActiveRecord: 1.4ms | Allocations: 24466)
+
+
+Started GET "/movies" for ::1 at 2020-05-20 10:16:48 -0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:2
+  Rendered movies/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1047)
+Completed 200 OK in 16ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 4010)
+
+
+Started GET "/movies/1" for ::1 at 2020-05-20 10:16:52 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:18:in `current_movie'
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCharacter Load (0.9ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."movie_id" = ?[0m  [["movie_id", 1]]
+  ↳ app/views/movies/show.html.erb:7
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  Rendered movies/show.html.erb within layouts/application (Duration: 323.8ms | Allocations: 18486)
+Completed 200 OK in 424ms (Views: 328.0ms | ActiveRecord: 3.5ms | Allocations: 23975)
+
+
+Started GET "/characters/5/edit" for ::1 at 2020-05-20 10:19:10 -0500
+Processing by CharactersController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCharacter Load (0.4ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:22:in `edit'
+  Rendering characters/edit.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/characters/_form.html.erb:5
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/characters/_form.html.erb:7
+  Rendered characters/_form.html.erb (Duration: 131.5ms | Allocations: 7138)
+  Rendered characters/edit.html.erb within layouts/application (Duration: 134.7ms | Allocations: 7437)
+Completed 200 OK in 171ms (Views: 162.4ms | ActiveRecord: 1.2ms | Allocations: 10830)
+
+
+Started PATCH "/characters/5" for ::1 at 2020-05-20 10:20:11 -0500
+Processing by CharactersController#update as HTML
+  Parameters: {"authenticity_token"=>"BhAfieT+PgY3CFvyStUiL0g9cjzbZ0QGfMtjDWtIOGjSSp62OENxqFxhxtFKdPzI2Tq58wrnWnOb/WVTVTVIwA==", "character"=>{"name"=>"Yoda-3", "movie_id"=>"4", "actor_id"=>"5"}, "commit"=>"Update Character", "id"=>"5"}
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:29:in `update'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+  [1m[36mActor Load (0.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+  [1m[36mCharacter Update (22.9ms)[0m  [1m[33mUPDATE "characters" SET "movie_id" = ?, "updated_at" = ? WHERE "characters"."id" = ?[0m  [["movie_id", 4], ["updated_at", "2020-05-20 15:20:11.713693"], ["id", 5]]
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+  [1m[35m (20.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/characters_controller.rb:30:in `update'
+Redirected to http://localhost:3000/characters
+Completed 302 Found in 71ms (ActiveRecord: 44.8ms | Allocations: 5644)
+
+
+Started GET "/characters" for ::1 at 2020-05-20 10:20:11 -0500
+Processing by CharactersController#index as HTML
+  Rendering characters/index.html.erb within layouts/application
+  [1m[36mCharacter Load (1.6ms)[0m  [1m[34mSELECT "characters".* FROM "characters"[0m
+  ↳ app/views/characters/index.html.erb:2
+  Rendered characters/index.html.erb within layouts/application (Duration: 15.5ms | Allocations: 1464)
+Completed 200 OK in 23ms (Views: 19.4ms | ActiveRecord: 1.6ms | Allocations: 5783)
+
+
+Started GET "/movies" for ::1 at 2020-05-20 10:20:20 -0500
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:2
+  Rendered movies/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1044)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.2ms | Allocations: 3683)
+
+
+Started GET "/movies/1" for ::1 at 2020-05-20 10:20:23 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:18:in `current_movie'
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCharacter Load (0.2ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."movie_id" = ?[0m  [["movie_id", 1]]
+  ↳ app/views/movies/show.html.erb:7
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  Rendered movies/show.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2108)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 1.1ms | Allocations: 4597)
+
+
+Started GET "/characters/13/edit" for ::1 at 2020-05-20 10:23:06 -0500
+Processing by CharactersController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mCharacter Load (0.3ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  ↳ app/controllers/characters_controller.rb:22:in `edit'
+  Rendering characters/edit.html.erb within layouts/application
+  Rendered characters/_form.html.erb (Duration: 1.4ms | Allocations: 1236)
+  Rendered characters/edit.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1531)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.3ms | Allocations: 3050)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= form_with(model: @character) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :movie %>
+<%= f.collection_select (:movie_id, @movies, :id, :title)%>
+<%= f.label :actor %>
+<%= f.collection_select :actor_id, @actors, :id, :name%>
+
+<%= f.submit %>
+<% end %>
+):
+1:    <%= form_with(model: @character) do |f| %>
+2:    <%= f.label :name %>
+3:    <%= f.text_field :name %>
+4:    <%= f.label :movie %>
+5:    <%= f.collection_select (:movie_id, @movies, :id, :title)%>
+6:    <%= f.label :actor %>
+7:    <%= f.collection_select :actor_id, @actors, :id, :name%>
+8:    
+9:    <%= f.submit %>
+10:    <% end %>
+  
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/characters/_form.html.erb:5: syntax error, unexpected ')', expecting end
+app/views/characters/_form.html.erb:12: syntax error, unexpected end, expecting end-of-input
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/characters/_form.html.erb:5: syntax error, unexpected ')', expecting end
+app/views/characters/_form.html.erb:12: syntax error, unexpected end, expecting end-of-input
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/characters/_form.html.erb:5: syntax error, unexpected ')', expecting end
+app/views/characters/_form.html.erb:12: syntax error, unexpected end, expecting end-of-input
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/characters/_form.html.erb:5: syntax error, unexpected ')', expecting end
+app/views/characters/_form.html.erb:12: syntax error, unexpected end, expecting end-of-input
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/characters/_form.html.erb:5: syntax error, unexpected ')', expecting end
+app/views/characters/_form.html.erb:12: syntax error, unexpected end, expecting end-of-input
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting ')'
+app/views/characters/_form.html.erb:5: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/characters/_form.html.erb:5: syntax error, unexpected ')', expecting end
+app/views/characters/_form.html.erb:12: syntax error, unexpected end, expecting end-of-input
+app/views/characters/edit.html.erb:1
+Started GET "/movies/new" for ::1 at 2020-05-20 10:27:30 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  Rendered movies/new.html.erb within layouts/application (Duration: 76.2ms | Allocations: 1461)
+Completed 200 OK in 132ms (Views: 102.8ms | ActiveRecord: 2.0ms | Allocations: 8785)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 10:30:41 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 114.8ms | Allocations: 14432)
+Completed 200 OK in 128ms (Views: 124.1ms | ActiveRecord: 1.2ms | Allocations: 17180)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 10:31:10 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (0.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 18.6ms | Allocations: 2645)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.2ms | Allocations: 5386)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 10:31:46 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 33.7ms | Allocations: 9189)
+Completed 200 OK in 103ms (Views: 35.8ms | ActiveRecord: 5.3ms | Allocations: 15751)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 10:32:11 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"yOu1YbCLhNyg5UjFZ4HQI0KKKPxdK08sI8QnGRzR3gIVqQs0YaONI31hJbJIxx5dOyYOfWGZzzv4uvgCcIOc8w==", "movie"=>{"title"=>"Knives out", "year"=>"2020", "actor_ids"=>["", "2", "5"]}, "commit"=>"Create Movie"}
+Completed 500 Internal Server Error in 302662ms (ActiveRecord: 0.0ms | Allocations: 212372)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:18:in `create'
+Started GET "/movies/new" for ::1 at 2020-05-20 10:37:23 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (2.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 994.4ms | Allocations: 2220325)
+Completed 200 OK in 1680ms (Views: 1157.0ms | ActiveRecord: 75.1ms | Allocations: 3816717)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 10:37:47 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"WTMzDmy0m1Lom8TX4LqVMzqF1cjq8xXVE/jc4PydGnCEcY1bvZySrTUfqaDP/FtNQynzSdZBlcLIhgP7kM9YgQ==", "movie"=>{"title"=>"Knives out", "year"=>"2020", "actor_ids"=>["", "2", "3"]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" IN (?, ?)[0m  [["id", 2], ["id", 3]]
+  ↳ (byebug):1:in `create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mMovie Create (4.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "year", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Knives out"], ["year", 2020], ["created_at", "2020-05-20 15:38:08.478522"], ["updated_at", "2020-05-20 15:38:08.478522"]]
+  ↳ (byebug):1:in `create'
+  [1m[36mCharacter Create (8.5ms)[0m  [1m[32mINSERT INTO "characters" ("movie_id", "actor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["movie_id", 11], ["actor_id", 2], ["created_at", "2020-05-20 15:38:08.496926"], ["updated_at", "2020-05-20 15:38:08.496926"]]
+  ↳ (byebug):1:in `create'
+  [1m[36mCharacter Create (0.1ms)[0m  [1m[32mINSERT INTO "characters" ("movie_id", "actor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["movie_id", 11], ["actor_id", 3], ["created_at", "2020-05-20 15:38:08.513759"], ["updated_at", "2020-05-20 15:38:08.513759"]]
+  ↳ (byebug):1:in `create'
+  [1m[35m (15.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ (byebug):1:in `create'
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mCACHE Movie Load (0.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" ORDER BY "movies"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (byebug):1:in `create'
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "characters" ON "actors"."id" = "characters"."actor_id" WHERE "characters"."movie_id" = ? LIMIT ?[0m  [["movie_id", 11], ["LIMIT", 11]]
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 136078ms (ActiveRecord: 30.3ms | Allocations: 353359)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:18:in `create'
+Started GET "/movies" for ::1 at 2020-05-20 10:44:26 -0500
+  [1m[35m (19.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#index as HTML
+  Rendering movies/index.html.erb within layouts/application
+  [1m[36mMovie Load (20.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/movies/index.html.erb:2
+  Rendered movies/index.html.erb within layouts/application (Duration: 621.2ms | Allocations: 1576732)
+Completed 200 OK in 1293ms (Views: 944.4ms | ActiveRecord: 56.0ms | Allocations: 3103834)
+
+
+Started GET "/movies/11" for ::1 at 2020-05-20 10:44:42 -0500
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mMovie Load (2.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:37:in `current_movie'
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCharacter Load (8.7ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."movie_id" = ?[0m  [["movie_id", 11]]
+  ↳ app/views/movies/show.html.erb:7
+  [1m[36mActor Load (14.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  [1m[36mActor Load (2.0ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  Rendered movies/show.html.erb within layouts/application (Duration: 1791.5ms | Allocations: 4140955)
+Completed 200 OK in 2217ms (Views: 1934.7ms | ActiveRecord: 87.6ms | Allocations: 5201810)
+
+
+Started GET "/movies/11/edit" for ::1 at 2020-05-20 10:44:51 -0500
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mMovie Load (37.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:37:in `current_movie'
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mActor Load (1.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/edit.html.erb:8
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" INNER JOIN "characters" ON "actors"."id" = "characters"."actor_id" WHERE "characters"."movie_id" = ?[0m  [["movie_id", 11]]
+  ↳ app/views/movies/edit.html.erb:8
+  Rendered movies/edit.html.erb within layouts/application (Duration: 859.9ms | Allocations: 1704064)
+Completed 200 OK in 1286ms (Views: 1123.0ms | ActiveRecord: 42.4ms | Allocations: 2670538)
+
+
+Started PATCH "/movies/11" for ::1 at 2020-05-20 10:45:12 -0500
+Processing by MoviesController#update as HTML
+  Parameters: {"authenticity_token"=>"00byfhXfpE/a6t4l/aWTnrBNHDzZxYqbz41OTZZDj1Lr4Bqr1RIqbXtDWrvBi1nftJH8cRbyzH55SxdOz1/DYw==", "movie"=>{"title"=>"Knives out", "year"=>"2020", "actor_ids"=>["", "2", "4"]}, "commit"=>"Update Movie", "id"=>"11"}
+Completed 500 Internal Server Error in 91399ms (ActiveRecord: 0.0ms | Allocations: 297326)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `update'
+app/controllers/movies_controller.rb:29:in `update'
+Started GET "/movies/11/edit" for ::1 at 2020-05-20 10:46:48 -0500
+  [1m[35m (15.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mMovie Load (10.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:40:in `current_movie'
+  Rendering movies/edit.html.erb within layouts/application
+  [1m[36mActor Load (11.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/edit.html.erb:8
+  [1m[35m (14.2ms)[0m  [1m[34mSELECT "actors"."id" FROM "actors" INNER JOIN "characters" ON "actors"."id" = "characters"."actor_id" WHERE "characters"."movie_id" = ?[0m  [["movie_id", 11]]
+  ↳ app/views/movies/edit.html.erb:8
+  Rendered movies/edit.html.erb within layouts/application (Duration: 1723.5ms | Allocations: 3471351)
+Completed 200 OK in 3137ms (Views: 1829.8ms | ActiveRecord: 238.2ms | Allocations: 6034806)
+
+
+Started PATCH "/movies/11" for ::1 at 2020-05-20 10:47:34 -0500
+Processing by MoviesController#update as HTML
+  Parameters: {"authenticity_token"=>"96gk+gsHfEu3IXYh32eEldkNtyxuNQiokOEclNYOoAXPDswvy8ryaRaI8r/jSU7U3dFXYaECTk0mJ0WXjxLsNA==", "movie"=>{"title"=>"Knives out", "year"=>"2020", "actor_ids"=>["", "2", "4"]}, "commit"=>"Update Movie", "id"=>"11"}
+  [1m[36mMovie Load (13.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:40:in `current_movie'
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/movies_controller.rb:29:in `update'
+  [1m[36mActor Load (10.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" IN (?, ?)[0m  [["id", 2], ["id", 4]]
+  ↳ app/controllers/movies_controller.rb:29:in `update'
+  [1m[36mActor Load (19.0ms)[0m  [1m[34mSELECT "actors".* FROM "actors" INNER JOIN "characters" ON "actors"."id" = "characters"."actor_id" WHERE "characters"."movie_id" = ?[0m  [["movie_id", 11]]
+  ↳ app/controllers/movies_controller.rb:29:in `update'
+  [1m[36mCharacter Destroy (20.9ms)[0m  [1m[31mDELETE FROM "characters" WHERE "characters"."movie_id" = ? AND "characters"."actor_id" = ?[0m  [["movie_id", 11], ["actor_id", 3]]
+  ↳ app/controllers/movies_controller.rb:29:in `update'
+  [1m[36mCharacter Create (17.4ms)[0m  [1m[32mINSERT INTO "characters" ("movie_id", "actor_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["movie_id", 11], ["actor_id", 4], ["created_at", "2020-05-20 15:47:36.496765"], ["updated_at", "2020-05-20 15:47:36.496765"]]
+  ↳ app/controllers/movies_controller.rb:29:in `update'
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/movies_controller.rb:29:in `update'
+Redirected to http://localhost:3000/movies/11
+Completed 302 Found in 2154ms (ActiveRecord: 119.5ms | Allocations: 4892973)
+
+
+Started GET "/movies/11" for ::1 at 2020-05-20 10:47:37 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mMovie Load (21.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/movies_controller.rb:40:in `current_movie'
+  Rendering movies/show.html.erb within layouts/application
+  [1m[36mCharacter Load (2.0ms)[0m  [1m[34mSELECT "characters".* FROM "characters" WHERE "characters"."movie_id" = ?[0m  [["movie_id", 11]]
+  ↳ app/views/movies/show.html.erb:7
+  [1m[36mActor Load (2.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  [1m[36mActor Load (19.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/movies/show.html.erb:10
+  Rendered movies/show.html.erb within layouts/application (Duration: 799.7ms | Allocations: 1705294)
+Completed 200 OK in 1374ms (Views: 1032.3ms | ActiveRecord: 45.0ms | Allocations: 3128161)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:03:56 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (13.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 873.5ms | Allocations: 2477694)
+Completed 200 OK in 2009ms (Views: 1118.5ms | ActiveRecord: 13.7ms | Allocations: 5148504)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:08:30 -0500
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (15.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 1403.6ms | Allocations: 2906516)
+Completed 200 OK in 2960ms (Views: 1650.7ms | ActiveRecord: 281.7ms | Allocations: 5839365)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 11:08:57 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"SU5XXyuQP4i7cbZIjF8sHN78SeV2+/JGnsxcaEvcsJOUDOkK+rg2d2b12z+jGeJip1BvZEpJclFFsoNzJ47yYg==", "movie"=>{"title"=>"", "year"=>"2020", "actor_ids"=>["", "3", "4"]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (8.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" IN (?, ?)[0m  [["id", 3], ["id", 4]]
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Completed 500 Internal Server Error in 234133ms (ActiveRecord: 24.6ms | Allocations: 2361934)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/movies_controller.rb:22:in `create'
+Started GET "/movies/new" for ::1 at 2020-05-20 11:16:26 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (8.0ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 1046.3ms | Allocations: 2905597)
+Completed 200 OK in 2311ms (Views: 1294.8ms | ActiveRecord: 141.9ms | Allocations: 5860706)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 11:16:52 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"eK9jxX/qyCXF8C+Cg8n+ecNpiJSwYsBoBMrDzD3Q84ql7d2QrsLB2hh0QvWsjzAHusWuFYzQQH/ftBzXUYKxew==", "movie"=>{"title"=>"test", "year"=>"1700", "actor_ids"=>["", "3", "4"]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (11.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" IN (?, ?)[0m  [["id", 3], ["id", 4]]
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 1218ms (ActiveRecord: 35.7ms | Allocations: 2837679)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:16:53 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (4.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:8
+  Rendered movies/new.html.erb within layouts/application (Duration: 535.6ms | Allocations: 1340165)
+Completed 200 OK in 882ms (Views: 789.2ms | ActiveRecord: 4.4ms | Allocations: 2166069)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:23:35 -0500
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/movies/new" for ::1 at 2020-05-20 11:23:42 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (1.9ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 1087.2ms | Allocations: 2649021)
+Completed 200 OK in 2167ms (Views: 1387.5ms | ActiveRecord: 1.9ms | Allocations: 5534280)
+
+
+  [1m[35m (20.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (1.9ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 1027.3ms | Allocations: 2910943)
+Completed 200 OK in 2076ms (Views: 1253.0ms | ActiveRecord: 126.4ms | Allocations: 5867618)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 11:24:07 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"IvpZ/zS55KV3dnvfMnbWvKtWnMVyLAU7A2CVFHqJc23/uOeq5ZHtWqryFqgdMBjC0vq6RE6ehSzYHkoPFtsxnA==", "movie"=>{"title"=>"", "year"=>"2020", "actor_ids"=>["", "1", "2"]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (17.8ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE "actors"."id" IN (?, ?)[0m  [["id", 1], ["id", 2]]
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 1321ms (ActiveRecord: 29.3ms | Allocations: 2889654)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:24:08 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (5.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 489.9ms | Allocations: 1355598)
+Completed 200 OK in 857ms (Views: 769.0ms | ActiveRecord: 5.2ms | Allocations: 2172406)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 11:24:28 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"pe7p6Uzf7eL20ZnrQtZY26mHoPNJ+y9m/cxRmOoECIp4rFe8nffkHStV9JxtkJal0CuGcnVJr3Emso6DhlZKew==", "movie"=>{"title"=>"", "year"=>"1700", "actor_ids"=>[""]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (5.4ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE 1=0[0m
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 572ms (ActiveRecord: 5.4ms | Allocations: 1434775)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:24:29 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (20.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 608.6ms | Allocations: 1360657)
+Completed 200 OK in 881ms (Views: 802.7ms | ActiveRecord: 20.5ms | Allocations: 2176860)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 11:24:48 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"YwP10ouO550wyO0VkipJq7tc99B8FszRRT3y1r8p/dC+QUuHWqbuYu1MgGK9bIfVwvDRUUCkTMaeQy3N03u/IQ==", "movie"=>{"title"=>"test", "year"=>"2022", "actor_ids"=>[""]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (6.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE 1=0[0m
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 486ms (ActiveRecord: 6.2ms | Allocations: 1151914)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:24:49 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (2.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 470.8ms | Allocations: 1361974)
+Completed 200 OK in 750ms (Views: 674.5ms | ActiveRecord: 2.7ms | Allocations: 2175193)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:25:12 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (3.1ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 667.3ms | Allocations: 1348393)
+Completed 200 OK in 990ms (Views: 929.4ms | ActiveRecord: 3.1ms | Allocations: 2162610)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:26:50 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (3.2ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:16
+  Rendered movies/new.html.erb within layouts/application (Duration: 668.4ms | Allocations: 1398993)
+Completed 200 OK in 1098ms (Views: 982.5ms | ActiveRecord: 3.2ms | Allocations: 2430818)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 11:27:01 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"cRkPuOmiYTjhZGKd5dpum/2AoDUosbODpb6AMnV1d26sW7HtOIpoxzzgD+rKnKDlhCyGtBQDM5R+wF8pGSc1nw==", "movie"=>{"title"=>"test", "year"=>"2023", "actor_ids"=>[""]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (2.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE 1=0[0m
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 540ms (ActiveRecord: 2.7ms | Allocations: 1129619)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:27:02 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (1.3ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:16
+  Rendered movies/new.html.erb within layouts/application (Duration: 518.9ms | Allocations: 1351567)
+Completed 200 OK in 863ms (Views: 761.5ms | ActiveRecord: 1.3ms | Allocations: 2168496)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:28:22 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (1.6ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 594.4ms | Allocations: 1401598)
+Completed 200 OK in 1172ms (Views: 1077.5ms | ActiveRecord: 1.6ms | Allocations: 2428496)
+
+
+Started POST "/movies" for ::1 at 2020-05-20 11:28:27 -0500
+Processing by MoviesController#create as HTML
+  Parameters: {"authenticity_token"=>"KxUqF5coGBvEFirrvRfD2SwQbWF+QZLa+JHLiF66tV32V5RCRgAR5BmSR5ySUQ2nVbxL4ELzEs0j7xSTMuj3rA==", "movie"=>{"title"=>"", "year"=>"", "actor_ids"=>[""]}, "commit"=>"Create Movie"}
+  [1m[36mActor Load (4.5ms)[0m  [1m[34mSELECT "actors".* FROM "actors" WHERE 1=0[0m
+  ↳ app/controllers/movies_controller.rb:18:in `create'
+Redirected to http://localhost:3000/movies/new
+Completed 302 Found in 726ms (ActiveRecord: 4.5ms | Allocations: 1449874)
+
+
+Started GET "/movies/new" for ::1 at 2020-05-20 11:28:28 -0500
+Processing by MoviesController#new as HTML
+  Rendering movies/new.html.erb within layouts/application
+  [1m[36mActor Load (1.7ms)[0m  [1m[34mSELECT "actors".* FROM "actors"[0m
+  ↳ app/views/movies/new.html.erb:14
+  Rendered movies/new.html.erb within layouts/application (Duration: 623.5ms | Allocations: 1356326)
+Completed 200 OK in 998ms (Views: 907.2ms | ActiveRecord: 1.7ms | Allocations: 2179065)
+
+
