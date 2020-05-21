@@ -1,0 +1,10 @@
+<h1>Can You Say My Name?</h1>
+<p class="tagline">The most boring game not on the Internet today</p>
+
+<%= image_tag "/beyonce.jpg" %>
+
+<%= form_with url: "/users", method: "post" do %>
+  <%= label_tag :username, "Username:" %>
+  <%= text_field_tag :username, @user.username %>
+  <%= submit_tag "Create User" %>
+<% end %>

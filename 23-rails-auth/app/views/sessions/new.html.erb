@@ -1,0 +1,15 @@
+<h1>Log In</h1>
+<%# it's not necessary to use a model, but it makes it easier to keep the username when details are incorrect %>
+<%= form_with model: @user, url: '/login', method: 'post' do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Log In" %>
+<% end %>
+
+<p class="error">
+  <%= flash[:error] %>
+</div>
