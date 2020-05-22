@@ -1,0 +1,5 @@
+<h4>Name:<%= @instructor.name %></h4>
+
+<%= form_for @instructor, method: :delete do |f|%>
+<%= f.submit "Delete Instructor"%>
+<%end%>

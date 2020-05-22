@@ -1,0 +1,7 @@
+<h4>Name: <%=@student.name%> </h4>
+<h4>age: <%=@student.age%> </h4>
+<h4>major: <%=@student.major%> </h4>
+
+<%= form_for @student, method: :delete do |f| %>
+<%= f.submit "Delete Student"%>
+<% end %>
