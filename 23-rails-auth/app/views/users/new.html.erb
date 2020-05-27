@@ -1,18 +1,1 @@
 <h1>Create User</h1>
-<%# it's not necessary to use a model, but it makes it easier to keep the username when details are incorrect %>
-<%= form_with model: @user, url: '/signup', method: 'post' do |f| %>
-  <%= f.label :username %>
-  <%= f.text_field :username %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.submit "Create User" %>
-<% end %>
-
-<% @user.errors.full_messages.each do |msg| %>
-  <p class="error"><%= msg %></p>
-<% end %>

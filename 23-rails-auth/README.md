@@ -1,18 +1,18 @@
 # Rails Auth
+*To see all branches for this project, go to: https://github.com/helloRupa/rails-auth*
 
 ## By the end of this lesson, you should be able to:
 Add authentication and authorization to a Rails app (most likely with help from Google or existing code)
 
+## But Why?
+Selective protection
+
 ## How we'll get there:
-- [ ] Explain why we need auth
 - [ ] Explain the difference between authentication and authorization
 - [ ] Identify the parts and steps required to authenticate a user
 - [ ] Correctly store passwords in a database
 - [ ] Create models, routes, controllers and views to support auth
 - [ ] Time permitting, a quick chat about security and sessions using an id
-
-## Why do we need auth?
-Selective protection
 
 ## Authentication vs Authorization
 Showing an ID to get into the club and getting a wristband in return, vs showing that wristband to access different areas of the club.
