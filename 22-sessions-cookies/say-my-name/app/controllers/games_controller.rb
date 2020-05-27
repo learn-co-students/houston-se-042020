@@ -3,9 +3,10 @@ class GamesController < ApplicationController
     answer = params[:name]
 
     if answer.downcase == 'beyonce'
-      puts 'Good job! You said her name'
+      session[:score] += 1
+      flash[:correct] = 'Good job! You said her name'
     else
-      puts 'How do you not know?!'
+      flash[:incorrect] = 'How do you not know?!'
     end
 
     redirect_to '/users/1'
