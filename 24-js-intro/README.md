@@ -7,9 +7,24 @@ Manipulate the DOM using JavaScript!
 JavaScript is the universal language of the web (on the frontend). It allows us to quickly update the appearance of a webpage without refreshing it.
 
 ### LGs:
+- [ ] Explain the difference between front- and backend
 - [ ] Explain what the DOM is
 - [ ] Mutate the DOM and its styles using JavaScript
 - [ ] Create new DOM nodes and append them
+
+### What is the difference between the front and backend?
+Frontend:
+* Users can see and interact with it
+* Downloaded by the browser after making a successful HTTP request
+* Includes HTML, CSS, JS: all of this source code is available to the user
+
+Backend:
+* Not directly accessible to users: indirectly accessible via the frontend
+* Stored on a server
+* Responds to specific requests
+* Can be written in many languages: Ruby, JS, C#, Java, etc.
+* Serves up the files necessary for the frontend
+* May include a database
 
 ### What is the DOM? How is it structured?
 Volunteer please.
