@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+  font-size: 18px;
+  padding: 16px;
+}
+
+#sub-name {
+  color: yellow;
+}
+
+.special {
+  color: fuchsia;
+}
