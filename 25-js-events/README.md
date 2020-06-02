@@ -153,6 +153,7 @@ Do all of my events have to match phases? ie, must they all capture or all bubbl
 
 What if I don't want the click handler on the DIV in the example above to get triggered when a user clicks the P?
 - Call `event.stopPropagation()` in the P handler
+    - It stops events from moving through the DOM
 - This method can be used with capturing or bubbling events
 
 We can demonstrate all of this using our Cat Actions div.
