@@ -22,3 +22,19 @@ form.addEventListener('submit', function (e) {
   createPost(gifUrl, comment);
   form.reset(); // clear the inputs in the form
 });
+
+const url = 'http://localhost:3000/posts';
+
+// fetch(`${url}/1`)
+//   .then(res => res.json())
+//   .then(json => {
+//     createPost(json.url, json.comment);
+//   })
+
+fetch(`${url}`)
+  .then(res => res.json())
+  .then(json => {
+    for (const post of json) {
+      createPost(post.url, post.comment);
+    }
+  })
