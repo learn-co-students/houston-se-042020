@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "url": "https://media.giphy.com/media/v6aOjy0Qo1fIA/giphy.gif",
+      "comment": "That cat is in a bowl! I could eat him up!!"
+    },
+    {
+      "id": 2,
+      "url": "https://media0.giphy.com/media/KcW2FVEJnzKeiZkVI1/giphy.gif",
+      "comment": "Why is that cat so sad?! I must pick 'em up and hug 'em!"
+    },
+    {
+      "id": 3,
+      "url": "https://media1.giphy.com/media/9uwnYUDw342pq/source.gif",
+      "comment": "She's pleading for forgiveness. Give it to her, she's just a cat!"
+    },
+    {
+      "id": 4,
+      "url": "https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif",
+      "comment": "That cat is me IRL, LOL, ROFL, LMAO"
+    }
+  ]
+}
