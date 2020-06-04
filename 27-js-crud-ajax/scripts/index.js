@@ -1,3 +1,5 @@
+const url = 'http://localhost:3000/posts';
+
 function makeEditForm(comment) {
   const form = document.createElement('form');
   const input = document.createElement('input');
@@ -15,15 +17,27 @@ function makeEditForm(comment) {
   return form;
 }
 
-function createPost(gifUrl, comment) {
+function createPost(gifUrl, comment, id) {
   // make post div
   const div = document.createElement('div');
   const img = document.createElement('img');
   const p = document.createElement('p');
+  const btn = document.createElement('button');
 
   img.setAttribute('src', gifUrl);
   p.textContent = comment;
-  div.append(img, p);
+  btn.textContent = 'X';
+
+  btn.addEventListener('click', () => {
+    fetch(`${url}/${id}`, {
+      method: 'DELETE'
+    });
+
+    div.remove();
+  });
+
+  div.dataset.postId = id;
+  div.append(img, p, btn);
 
   const posts = document.querySelector('.posts');
   posts.append(div);
@@ -36,16 +50,31 @@ form.addEventListener('submit', function (e) {
   const gifUrl = document.querySelector('#gif-url').value;
   const comment = document.querySelector('#comment').value;
 
-  createPost(gifUrl, comment);
+  
+  postCatGif(gifUrl, comment)
+    .then(res => res.json())
+    .then(json => {
+      createPost(gifUrl, comment, json.id);
+    })
   form.reset(); // clear the inputs in the form
 });
 
-const url = 'http://localhost:3000/posts';
+function postCatGif(url, comment) {
+  return fetch('http://localhost:3000/posts', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ 
+      url: url,
+      comment: comment })
+  });
+}
 
 fetch(url)
   .then(res => res.json())
   .then(json => {
     for (const post of json) {
-      createPost(post.url, post.comment);
+      createPost(post.url, post.comment, post.id);
     }
   });
