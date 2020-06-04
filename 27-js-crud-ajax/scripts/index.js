@@ -1,4 +1,4 @@
-function makeEditForm(id, comment) {
+function makeEditForm(comment) {
   const form = document.createElement('form');
   const input = document.createElement('input');
   const submitBtn = document.createElement('input');
