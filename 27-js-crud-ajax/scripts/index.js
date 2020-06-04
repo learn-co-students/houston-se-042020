@@ -78,3 +78,13 @@ fetch(url)
       createPost(post.url, post.comment, post.id);
     }
   });
+
+  // Example of a PATCH request
+//   fetch('http://localhost:3000/posts/4', {
+//     method: 'PATCH',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({ 
+//     comment: 'He is working hard' })
+// })
