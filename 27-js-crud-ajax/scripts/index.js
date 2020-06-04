@@ -13,6 +13,15 @@ function makeEditForm(comment) {
   form.classList.add('edit-form'); // style the form
 
   // How do we make the PATCH request and update the DOM?
+    // Example of a PATCH request
+//   fetch('http://localhost:3000/posts/4', {
+//     method: 'PATCH',
+//     headers: {
+//         'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({ 
+//     comment: 'He is working hard' })
+// })
 
   return form;
 }
@@ -79,12 +88,3 @@ fetch(url)
     }
   });
 
-  // Example of a PATCH request
-//   fetch('http://localhost:3000/posts/4', {
-//     method: 'PATCH',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({ 
-//     comment: 'He is working hard' })
-// })
