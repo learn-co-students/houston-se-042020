@@ -1,3 +1,20 @@
+function makeEditForm(id, comment) {
+  const form = document.createElement('form');
+  const input = document.createElement('input');
+  const submitBtn = document.createElement('input');
+
+  input.type = 'text';
+  input.value = comment;
+  submitBtn.type = 'submit';
+  submitBtn.value = 'Edit Post';
+  form.append(input, submitBtn);
+  form.classList.add('edit-form'); // style the form
+
+  // How do we make the PATCH request and update the DOM?
+
+  return form;
+}
+
 function createPost(gifUrl, comment) {
   // make post div
   const div = document.createElement('div');

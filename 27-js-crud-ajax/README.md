@@ -49,7 +49,8 @@ Here's an example of required options for making POST requests:
             // of data is in the body so it can handle it properly
     },
     body: JSON.stringify({ url: 'http://example.com', description: 'Looks like an example' })
-    // the value of body is the data you're sending. it must be a string, hence JSON.stringify().
+    // the value of body is the data you're sending. it must be a string, hence 
+    // JSON.stringify().
     // the keys in the body must match the attribute names expected on the server-side
     // in Rails, when we use strong params (e.g. params.require(:post).permit(:url)), this
     // means we must nest our values: { post: { url: 'https://example.com' } }

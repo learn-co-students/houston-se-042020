@@ -70,3 +70,17 @@ button {
   padding: 5px 10px;
   cursor: pointer;
 }
+
+.edit-form {
+  width: 300px;
+  background-color: lightgrey;
+  margin: 16px auto;
+  box-sizing: border-box;
+}
+
+.edit-form input[type="text"] {
+  float: none;
+  width: 95%;
+  font-size: 0.75em;
+  margin-bottom: 16px;
+}
