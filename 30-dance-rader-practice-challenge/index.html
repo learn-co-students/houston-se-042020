@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dance Rader</title>
+  <link href="https://fonts.googleapis.com/css?family=Russo+One|Ubuntu:300,400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./styles/reset.css">
+  <link rel="stylesheet" type="text/css" href="./styles/main.css">
+  <script src="./src/api.js"></script>
+  <script defer src="./src/index.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Dance Rader</h1>
+    <!-- ADVANCED DELIVERABLE: MENU OF DANCERS -->
+    <nav>
+      <ul>
+        <li><button>Dancer name</button></li>
+        <li><button>Another dancer name</button></li>
+      </ul>
+    </nav>
+    <!-- END ADVANCED DELIVERABLE -->
+  </header>
+  
+  <main>
+    <section class="details">
+      <img src="assets/placeholder.png" id="dancer-img">
+      <h2 id="dancer-name">Dancer Name Here</h2>
+      <div class="likes">
+        <button id="unlike"><img src="assets/increase_likes.png"></button>
+        <span id="like-count">0</span>
+        <button id="like"><img src="assets/increase_likes.png"></button>
+      </div>
+      <p id="dancer-description">Description goes here.</p>
+    </section>
+
+    <section class="feedback">
+      <form>
+        <input type="text" placeholder="Leave feedback" id="new-feedback">
+        <input type="submit" value=">">
+      </form>
+
+      <ul>
+        <li>Feedback one</li>
+        <li>Feedback two</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

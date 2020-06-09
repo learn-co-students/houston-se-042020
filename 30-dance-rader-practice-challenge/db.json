@@ -1,0 +1,48 @@
+{
+  "dancers": [
+    {
+      "id": 1,
+      "name": "Carlton",
+      "image": "https://i.imgur.com/iM8ybeC.gif",
+      "description": "20 years of experience in all forms of dance. Known for shiny outfits.",
+      "likes": 23,
+      "feedback": [
+        "Nice moves!",
+        "Never stop never stopping"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Celery Man",
+      "image": "https://media.giphy.com/media/WaZiz4UsM2lhu/giphy.gif",
+      "description": "Dances with celery sticks on occasion, but not always.",
+      "likes": 2,
+      "feedback": [
+        "This is giving me a headache."
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Smoothie",
+      "image": "https://66.media.tumblr.com/tumblr_lpgwzknviV1r0f8s0o1_250.gif",
+      "description": "Practice makes smoothie!",
+      "likes": 0,
+      "feedback": [
+        "No lumps in there!",
+        "Keep up the smooth moves"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "The Caffeinated",
+      "image": "https://66.media.tumblr.com/371e373f59e4d0bee26c24027ca3c817/tumblr_mlo0tmyH6m1rt8i4vo1_500.gif",
+      "description": "Brings the energy to the party...always.",
+      "likes": 7,
+      "feedback": [
+        "Come to my birthday party please",
+        "I like this",
+        "You are better than coffee!"
+      ]
+    }
+  ]
+}
