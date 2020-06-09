@@ -2,6 +2,15 @@
 
 Welcome to BookLiker, where you can look at books and like them! (Hey, not all startups are brilliant ideas.)
 
+## If you'd like to see a flatter refactor
+Check out the files in the flatter directory.
+
+To run the flatter solution:
+
+1. `cd flatter`
+2. `json-server -w db.json`
+3. Open index.html inside flatter
+
 ## Getting Started
 
 You will be using the [json-server][] package to mock an external API. You can make the same RESTful requests to this server that you would to any API. If you haven't yet, install json-server.
