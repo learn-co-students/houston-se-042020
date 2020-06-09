@@ -2,6 +2,12 @@
 
 Today you'll be building an app for viewing and editing dancers. You will be using a local API and building out the frontend for our app, Dance Rader.
 
+## Group 1 Review
+Your JS code is in index.js. You'll need to comment out index2.js in the HTML and uncomment your JS file to run it.
+
+## Group 2 Review
+Your JS code is in index2.js. You'll need to comment out index.js in the HTML and uncomment your JS file to run it.
+
 ## Testing
 
 This practice code challenge includes a test suite. Keep in mind that the actual code challenge will not include a test suite. To get the most out of this, manually test your code as you would during a code challenge. After you've completed the Core Deliverables and are satisfied with your progress, run the tests for the Core Deliverables. Do the same for the Advanced Deliverables.
