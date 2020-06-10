@@ -1,5 +1,5 @@
 // CONVERT THE FOLLOWING FUNCTIONS TO ARROW SYNTAX
-function sayKrysta() {
+const sayKrysta = () => {
   const name = 'Krysta';
   console.log(name);
 }
@@ -27,19 +27,40 @@ console.log(' ');
 // REPLACE THE FOR OF LOOP WITH FOREACH
 const goodFoods = ['thai curry', 'pockey', 'sushi', 'pasta'];
 
-for (const food of goodFoods) {
-  const sentence = `I like ${food}`;
+// for (const food of goodFoods) {
+//   const sentence = `I like ${food}`;
+//   console.log(sentence);
+// }
+
+// function callback(str1, str2, str3) {
+//   console.log('in a callback');
+//   console.log(str1, str2, str3);
+// }
+
+// function caller(callback) {
+//   callback('i', 'like', 'cats');
+// }
+
+// caller(callback);
+
+goodFoods.forEach((food, index, originalArray) => {
+  const sentence = `I like ${index}`;
   console.log(sentence);
-}
+});
 
 // CREATE AN ARRAY WHERE EVERY NAME IS REPEATED, e.g. ['Taiye Taiye', 'Freddy Freddy',...]
 // LOG THAT TO THE CONSOLE
 const names = ['Taiye', 'Freddy', 'Lauren', 'Eric', 'Thach'];
 
+const mappedNames = names.map(name => name + ' ' + name);
+console.log(mappedNames);
+
 
 // IF 'cat in bowl' IS IN THE ARRAY, PRINT 'CAT IS IN THE BOWL' IN THE CONSOLE
 const sentences = ['dog in soup', 'sloth in party', 'cat in bowl', 'truthiness is real', 'cat in bowl'];
 
+let findCat = sentences.find(el => el === 'cat in bowl');
+console.log(findCat);
 
 // RETURN AN ARRAY CONTAINING ONLY THE WORDS WITH A LENGTH GREATER THAN 5
 // PRINT ARRAY TO CONSOLE
