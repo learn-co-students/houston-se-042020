@@ -199,7 +199,7 @@ numbers.filter(el => el % 2 === 0); // [2]
 ```
 User filter() any time you need to filter or select certain elements from an array.
 
-### reduce(callback(element, index, array), initialValue)
+### reduce(callback(accumulator, element, index, array), initialValue)
 reduce() is similar to Ruby's Array#reduce or Array#inject. Use it when you want to transform an array to another datatype, such as a string or number. You can also use it when the other array methods simply don't makes sense - maybe you need to do a lot more with the array than those other methods allow.
 ```
 const numbers = [1, 2, 3];
@@ -358,4 +358,80 @@ function giveMeTheArgs(arg1, arg2, arg3) {
 const myArgs = ['making', 'it', 'difficult'];
 
 giveMeTheArgs(...myArgs); // Argument 1: making, Argument 2: it, Argument 3: difficult
+```
+
+## Nested Arrays and Objects Destructuring Plus Deeper Copying
+
+```
+const sayings = {
+  cat: 'meow',
+  dog: 'woof',
+  sloths: {
+      tyson: 'abra',
+      jancy: 'cadabra'
+  },
+  people: {
+    students: {
+      henrietta: 'tell me more',
+      henry: 'also tell me',
+      henri: 'parlez vous francais ?'
+    }
+  }
+};
+
+const { cat, 
+        sloths: { 
+          tyson
+        }, 
+        people: { 
+          students: { 
+            henrietta, 
+            henri 
+          } 
+        } 
+      } = sayings
+```
+
+In the above code, we use the keys to enter into our nested objects, pull out values, and assign them to variables. Therefore, our variables are cat, tyson, henrietta, henri.
+
+We can do similar work with nested arrays:
+```
+const values = [1, 2, [3, 4, [5]], 6]
+let [a, b, [c, d, [e]], f] = values
+let [g,, [h], i] = values
+```
+Which values will be assigned to the variables?
+
+We can also make 'deep' copies of objects using the spread operator, if we know how to traverse the object:
+```
+const sayings = {
+  cat: 'meow',
+  dog: 'woof',
+  sloths: {
+    tyson: 'abra',
+    jancy: 'cadabra'
+  },
+  people: {
+    students: {
+      henrietta: 'tell me more',
+      henry: 'also tell me',
+      henri: 'parlez vous francais ?'
+    }
+  }
+}
+
+const sayingsCopy = {
+  ...sayings,
+  sloths: {
+    ...sayings.sloths
+  },
+  people: {
+    ...sayings.people,
+    students: {
+      ...sayings.people.students
+    }
+  }
+}
+
+sayingsCopy.people.students.henri = 'J'aime la pizza !'
 ```
