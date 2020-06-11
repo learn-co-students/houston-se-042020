@@ -120,7 +120,7 @@ There are multiple definitions for declarative programming. However, they all ha
 - _She's not Madonna._
 - Never speak to me again.
 
-We can think of imperative programming is being more procedural, less abstracted, and more concerned with describing the specific steps of how something is done. In contrast, we can think of declarative programming as being closer to how we speak when we tell people what to do. It's very refactored looking (sorry, running out of good words here), and it's easier to read what's happening.
+We can think of imperative programming as being more procedural, less abstracted, and more concerned with describing the specific steps of how something is done. In contrast, we can think of declarative programming as being closer to how we speak when we tell people what to do. It's very refactored looking (sorry, running out of good words here), and it's easier to read what's happening.
 
 In programming terms, we can think of using a for loop to manually iterate through an array and push values to a new array as being imperative. We can think of array methods, like map() as being declarative.
 ```
@@ -142,7 +142,7 @@ const mappedValues = values.map(val => val * 2);
 mappedValues; // [2, 4, 6]
 ```
 
-JS allows us to combine imperative and declarative programming techniques. HTML, CSS, and RegEx can be thought of as declarative languages. For example, we're not concerned with how those p tags get on the page, we just say 'Hey Browser, makes this paragraph!'
+JS allows us to combine imperative and declarative programming techniques. HTML, CSS, and RegEx can be thought of as declarative languages. For example, we're not concerned with how those p tags get on the page, we just say 'Hey Browser, make this paragraph!'
 
 ### Function Composition
 If functions are composable, it means we can combine two or more functions to return a result.
@@ -232,10 +232,10 @@ oneLessPant(pantsTypes); // ["jeans", "trousers"]
 ```
 
 Benefits:
-	•	easier to test since they're more predictable
-	•	can cache the results due to consistency of return values
-	•	self documenting since no reliance on outside dependencies
-	•	easier to work with due to lack of side effects
+- easier to test since they're more predictable
+- can cache the results due to consistency of return values
+- self documenting since no reliance on outside dependencies
+- easier to work with due to lack of side effects
 
 Use pure functions when it makes sense. If it's making your code really hard to understand, you've gone too far. JS tends to be a mix of impure and pure functions. We have to make HTTP requests and mess with the DOM - that's all about side effects and outside dependencies!!
 
@@ -253,7 +253,7 @@ function loveXAlways() {
 
 In the above code, `x` is in `loveXAlways`'s outer scope. When `loveXAlways` is created, it maintains a reference to `x`. It also maintains references to everything inside of it.
 
-They also allow us to emulate private state. So if you need to define a function or variable that shouldn't be easily available by name to any other part of your code, you can consider using a closure. Check out the module design pattern to see a better use of closures for this purpose. Or ask me. I'll talk to you about it.
+Closures also allow us to emulate private state. So if you need to define a function or variable that shouldn't be easily available by name to any other part of your code, you can consider using a closure. Check out the module design pattern to see a better use of closures for this purpose. Or ask me. I'll talk to you about it.
 ```
 function neighborhood() {
 	const city = 'land of the brums';
@@ -261,11 +261,11 @@ function neighborhood() {
 	function house() {
 		const street = 'spaghetti junction';
 
-		function sofa() {
+		function address() {
 			return `I live in ${city} on ${street}`;
 		}
 		
-		return sofa();
+		return address();
 	}
 
 	return house();
