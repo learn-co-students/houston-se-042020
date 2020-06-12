@@ -2,7 +2,7 @@
 We are going to combine our backend skills with our frontend skills.
 
 ## By the end of this lesson, you should be able to:
-Set up a backend to receive requests and send JSON responses to a frontend, which then performs some DOM manipulation as a result.
+Set up a backend to receive requests and send JSON responses to a frontend.
 
 ## Before we go through the Pokemon teams project:
 Let's go over a few things:
