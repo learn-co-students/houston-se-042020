@@ -1,6 +1,10 @@
 class Controller {
   // FIX this, what's wrong with it?
-  initialize(x, y, velocity, dir, img) {
+  constructor({x, y, velocity, dir, img}) {
+  // constructor(pojo) {
+    // this.x = pojo.x;
+    // this.y = pojo.y;
+    // this.velocity = pojo.velocity;
     this.x = x;
     this.y = y;
     this.velocity = velocity;
@@ -12,7 +16,9 @@ class Controller {
     this.element.src = img;
 
     // Call setDirection with the dir
+    this.setDirection(dir);
     // Call render() to kick off the animation
+    this.render();
   }
 
   place([deltaX, deltaY]=[0, 0]) {
@@ -46,7 +52,12 @@ class Controller {
   // if element is outOfBounds
   // remove element from DOM
   // stop the animation (the interval is stored in this.animate)
-
+  cleanUp() {
+    if (this.outOfBounds()) {
+      this.element.remove();
+      clearInterval(this.animate);
+    }
+  }
 
   // put el on screen and animate
   // !!DO NOT USE SETINTERVAL TO ANIMATE IN SERIOUS PROJECTS!!
@@ -63,5 +74,7 @@ class Controller {
 
   // DECLARE a class method that
   // chooses a random number up to a limit
-
+  static makeChoice(limit) {
+    return Math.floor(Math.random() * limit);
+  }
 }
