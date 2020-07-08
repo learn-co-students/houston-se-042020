@@ -1,0 +1,68 @@
+h1 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 6px;
+}
+
+img {
+  width: 500px;
+  float: left;
+}
+
+.details {
+  width: 1150px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  left: 130px;
+}
+
+.glossary {
+  float: left;
+  width: 600px;
+  margin-left: 50px;
+  font-size: 18px;
+}
+
+.glossary strong::after {
+  content: ': '
+}
+
+ul {
+  padding-left: 14px;
+  margin-top: 0;
+}
+
+li {
+  padding: 5px 0;
+  list-style-type: none;
+}
+
+.quiz {
+  width: 800px;
+  margin: 500px auto 100px auto;
+  font-size: 20px;
+}
+
+.quiz .answer {
+  margin-left: 46px;
+  font-size: 30px;
+}
+
+.quiz .answer span {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+input[type="text"] {
+  font-size: inherit;
+  width: 200px;
+  text-align: center;
+}
+
+.quiz p {
+  margin-bottom: 5px;
+}

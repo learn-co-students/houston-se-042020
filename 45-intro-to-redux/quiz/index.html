@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux Cycle Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="quiz.js"></script>
+</head>
+
+<body>
+
+  <section class="details">
+    <h1>Fill in the Redux Cycle</h1>
+    <img src="redux-cycle.png">
+
+    <div class="glossary">
+      <h2>Glossary / Puzzle Pieces</h2>
+      <ul>
+        <li><strong>store</strong>An object {} that holds the state of the application and provides us with methods for
+          manipulating it, including dispatch() and getState().</li>
+        <li><strong>state</strong>The data that must be remembered in order for the app to function, an object {}.</li>
+        <li><strong>action</strong>An object {} that represents a change request, similar to an HTTP request. It has a
+          type, which states what to do, and optionally, a payload containing data required to complete the request.
+        </li>
+        <li><strong>dispatch</strong>A method available on the store, which accepts an action as an argument. It calls
+          the reducer with the current state in the store and the action in order to reassign the state.</li>
+        <li><strong>reducer</strong>A pure function that takes the current state and an action, and then uses (or
+          reduces)
+          that data to return the new state. It contains a switch statement for routing/handling actions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="quiz">
+    <h3>Step 1:</h3>
+    <p>An event occurs on the frontend, such as a button click or page load, signalling that the app's state might need to change.</p>
+
+    <h3>Step 2:</h3>
+    <p>The state of the app is in the store. Which two puzzle pieces do we need to tell the store we'd like to make a change?</p>
+    <div class="answer">store.<input type="text"><span>(</span><input type="text"><span>)</span></div>
+
+    <h3>Step 3:</h3>
+    <p>The request must be handled. Which puzzle piece handles it and what does it require to execute properly?</p>
+    <div class="answer"><input type="text"><span>(</span><input type="text"><span>,</span> <input type="text"><span>)</span></div>
+
+    <h3>Step 4:</h3>
+    <p>It's time to update the state! Which puzzle piece returns the new state and where is the new state stored?</p>
+    <div class="answer">The <input type="text"> returns the new state, which is stored in the <input type="text">.</div>
+  </section>
+</body>
+
+</html>

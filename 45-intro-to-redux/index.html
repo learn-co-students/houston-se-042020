@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini Redux</title>
+  <script src="mini-redux.js"></script>
+  <script src="custom.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+  <h1>Mini Redux</h1>
+  <figure>
+    <img style="width:200px" src="images/kitten.png">
+    <figcaption>But Redux was already so smol like this kitten!</figcaption>
+  </figure>
+
+  <h2>Instructions:</h2>
+  <ol>
+    <li>Build createStore(). It stores the state. The state is reassignable.</li>
+    <li>Write a method inside the store called getState(). It returns the state.</li>
+    <li>The store needs to accept a reducer as an argument, which is used to set the initial state and create new state.</li>
+    <li>Write a method called dispatch(). It invokes the reducer with the current state and an action. It then reassigns the state.</li>
+    <li>Test your code so far. Write a reducer that sets the initial state to { cats: ['Meowser', 'Charlie', 'Fluffanilla'], selectedCat: 'Meowser' }</li>
+    <li>Test your code with an action. Try adding a cat. Update the reducer to handle this action.</li>
+    <li>Can you make a more dynamic/flexible action, say with an action creator so you can add any name you like?</li>
+    <li>For practice, add another action: one that changes the selected cat, but only if it's in the cats list.</li>
+    <li>BONUS: Write a function combineReducers(), which takes an object as an argument. The object maps reducers to keys. The combined reducer returned by the function will then be provided to createStore().</li>
+  </ol>
+  
+
+</body>
+</html>
