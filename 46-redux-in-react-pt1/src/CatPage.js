@@ -19,16 +19,16 @@ class CatPage extends Component {
   //   });
   // }
 
-  selectCat = (cat) => {
-    this.setState({ selectedCat: cat });
-  }
+  // selectCat = (cat) => {
+  //   this.setState({ selectedCat: cat });
+  // }
 
-  addCat = (cat) => {
-    this.setState({
-      cats: [...this.state.cats, cat],
-      selectedCat: cat
-    });
-  }
+  // addCat = (cat) => {
+  //   this.setState({
+  //     cats: [...this.state.cats, cat],
+  //     selectedCat: cat
+  //   });
+  // }
 
   render() {
     console.log('rendering CatPage');
@@ -36,9 +36,9 @@ class CatPage extends Component {
     return (
       <>
         <h1>Cat Page</h1>
-        <Menu selectCat={this.selectCat} />
+        <Menu />
         <Details />
-        <Form addCat={this.addCat} />
+        <Form />
       </>
     )
   }
