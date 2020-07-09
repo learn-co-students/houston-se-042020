@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { addCat, selectCat } from './actions/catActions';
 
 class Form extends Component {
   constructor(props) {
@@ -15,7 +16,9 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addCat(this.state.newCat);
+    window.store.dispatch(addCat(this.state.newCat));
+    window.store.dispatch(selectCat(this.state.newCat));
+    // this.props.addCat(this.state.newCat);
     this.setState({newCat: ''});
   }
 

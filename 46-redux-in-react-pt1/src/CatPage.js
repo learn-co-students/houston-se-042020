@@ -13,6 +13,12 @@ class CatPage extends Component {
     }
   }
 
+  // componentDidMount() {
+  //   window.store.subscribe(() => {
+  //     this.forceUpdate();
+  //   });
+  // }
+
   selectCat = (cat) => {
     this.setState({ selectedCat: cat });
   }
@@ -30,8 +36,8 @@ class CatPage extends Component {
     return (
       <>
         <h1>Cat Page</h1>
-        <Menu cats={this.state.cats} selectCat={this.selectCat} />
-        <Details cat={this.state.selectedCat} />
+        <Menu selectCat={this.selectCat} />
+        <Details />
         <Form addCat={this.addCat} />
       </>
     )

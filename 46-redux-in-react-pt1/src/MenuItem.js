@@ -1,11 +1,13 @@
 import React from 'react';
+import { selectCat } from './actions/catActions';
 
-function MenuItem({ catName, selectCat }) {
+function MenuItem({ catName }) {
 
   console.log('render MenuItem');
   
   const handleClick = e => {
-    selectCat(e.target.textContent);
+    window.store.dispatch(selectCat(e.target.textContent));
+    // selectCat(e.target.textContent);
   };
 
   return (
