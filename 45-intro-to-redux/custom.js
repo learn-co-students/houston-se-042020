@@ -9,12 +9,39 @@ const initialCatState = {
 };
 
 function catReducer(state=initialCatState, action) {
-  
+  switch(action.type) {
+    case 'CHANGE_CAT':
+      if (state.cats.includes(action.selectedCat)) {
+        return {
+          ...state,
+          selectedCat: action.selectedCat
+        }
+      }
+      return state;
+    case 'ADD_CAT':
+      return {
+        ...state,
+        cats: [...state.cats, action.cat]
+      };
+    default:
+      return state;
+  }
 }
 
+// const addCat = {
+//   type: 'ADD_CAT',
+//   cat: 'Roxanne'
+// };
 
+const addCat = cat => ({
+  type: 'ADD_CAT',
+  cat
+});
 
-
+const changeCat = selectedCat => ({
+  type: 'CHANGE_CAT',
+  selectedCat
+});
 
 
 

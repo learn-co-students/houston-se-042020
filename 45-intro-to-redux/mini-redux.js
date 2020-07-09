@@ -1,17 +1,26 @@
 function createStore(reducer) {
-  let state = {};
+  let state;
+  let subscribedListener;
 
   function getState() {
-    return 'Getting the state';
+    // return 'Getting the state';
+    return state;
   }
 
   function dispatch(action) {
-    return 'Dispatching an action';
+    // return 'Dispatching an action';
+    state = reducer(state, action);
+
+    if (typeof subscribedListener === 'function') {
+      subscribedListener();
+    }
   }
 
   function subscribe(listener) {
-    
+    subscribedListener = listener;
   }
+
+  dispatch({ type: 'THOSE_SOME_QUICK_MAFFS_INIT' });
 
   return {
     getState,
