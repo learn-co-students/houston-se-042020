@@ -17,7 +17,7 @@ class Details extends Component {
     window.store.subscribe(() => {
       // compare old state to new state
       if (this.state.oldSelectedCat !== window.store.getState().selectedCat) {
-        this.forceUpdate();
+        // this.forceUpdate();
         this.setState({ oldSelectedCat: window.store.getState().selectedCat });
       }
     });

@@ -15,7 +15,7 @@ class Menu extends Component {
   componentDidMount() {
     window.store.subscribe(() => {
       if (this.state.cats !== window.store.getState().cats) {
-        this.forceUpdate();
+        // this.forceUpdate();
         this.setState({ cats: window.store.getState().cats });
       }
     });
