@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Reenie+Beanie&display=swap");
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+body {
+  text-align: center;
+  color: #1e1d1d;
+}
+
+h1, h2 {
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 8px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.85em;
+}
+
+nav {
+  width: 300px;
+  margin: auto;
+  background-color: #fff3c8;
+  padding: 1px 20px 20px 20px;
+  border-radius: 10px;
+}
+
+nav div {
+  cursor: pointer;
+  padding: 5px;
+}
+
+nav div:hover {
+  color: #b16bc2;
+  background-color: #fff;
+}
+
+input[type="submit"] {
+  cursor: pointer;
+}
+
+.cat-name {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 50px;
+  color: #b16bc2;
+  margin: 0 auto 48px auto;
+}
+
+form {
+  padding-bottom: 80px;
+}
+
+form::before {
+  content: ">o< /////////////////////////////////////////////////////////////////////// >o<";
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
