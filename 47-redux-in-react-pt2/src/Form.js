@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { addCat } from './actions/catActions';
 
 class Form extends Component {
   constructor(props) {
@@ -15,7 +17,8 @@ class Form extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    this.props.addCat(this.state.newCat);
+    // this.props.addCat(this.state.newCat);
+    this.props.beyonce(this.state.newCat);
     this.setState({newCat: ''});
   }
 
@@ -32,4 +35,10 @@ class Form extends Component {
   }
 }
 
-export default Form;
+// export default Form;
+
+const mapDispatchToProps = dispatch => ({
+  beyonce: cat => dispatch(addCat(cat))
+});
+
+export default connect(null, mapDispatchToProps)(Form);

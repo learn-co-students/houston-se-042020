@@ -1,5 +1,6 @@
 import React from 'react';
 import catSpinner from './assets/cat_loading.gif';
+import { connect } from 'react-redux';
 
 function Details({ cat }) {
   console.log('render Details');
@@ -13,4 +14,10 @@ function Details({ cat }) {
   )
 }
 
-export default Details;
+// export default Details;
+
+const mapStateToProps = state => ({
+  cat: state.selectedCat
+});
+
+export default connect(mapStateToProps)(Details);
